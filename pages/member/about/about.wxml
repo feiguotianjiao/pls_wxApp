@@ -1,0 +1,40 @@
+<!--about.wxml-->
+<view class="container">
+  <text class="txt" decode>拍立送，
+    爱尚家购物体系项目之一，
+    结合网上商城、移动商城与呼叫平台，
+    打造<text style="color:#f00;">一小时内极速送达</text>的O2O购物新体验。
+
+    我们为您提供含超市快消品、
+    生活日用、水果蔬菜等的5大种商品。
+    只需您动动手指，指定时间送货上门；
+
+    我们支持手机订单，也支持电话订购；
+    我们支持微信选购，也支持APP商城；
+    我们支持在线支付，也支持货到付款。
+
+    宁阳、泰安、济南、青岛、山东乃至全国，
+    拍立送即刻出发，你准备好了吗？
+
+    <text style="color:#f00;">【优势】</text>
+    &lt;快&gt; 一小时极速达
+    购物无需等待
+    私人专享全速送达
+
+    &lt;低&gt; 周边最低价位
+    强劲促销力度
+    想不到的物廉价美
+
+    &lt;正&gt; 100%凌云正品
+    真正实体品质
+    安心购物放心享用
+
+    &lt;心&gt; 售后当面退换
+    速递员即客服
+    当面快速处理退换货
+  </text>
+  <view id="nav">
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

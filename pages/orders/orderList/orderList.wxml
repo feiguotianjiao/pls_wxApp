@@ -1,0 +1,56 @@
+<!--orderList.wxml-->
+<view class="container">
+  <view wx:if="{{false}}" class="tip">订单详情，提供“再来一单”和“再次选购”功能，欢迎体验</view>
+  <navigator wx:for="{{orderList}}" wx:for-index="idt" wx:for-item="orderItem" wx:key="{{idt}}" url="/pages/orders/detail/detail?ordersNo={{orderItem.ordersNo}}&idt={{idt}}" class="order">
+    <view class="topMes">
+      <view class="shopName overTxt">{{orderItem.shopName}}</view>
+      <view class="time">{{orderItem.time}}</view>
+    </view>
+    <view class="content">
+      <view class="img">
+        <image mode='scaleToFill' src='{{orderItem.imageurl}}'></image>
+      </view>
+      <view class="txt">
+        <text>共计<text style='color:#f00;'> {{orderItem.pdNum}} </text>件商品
+        订单编号：<text style='color:#333;'>{{orderItem.ordersNo}}</text></text>
+      </view>
+      <view wx:if="{{false}}" class="btns">
+        <view class="btn" style='background:#372070;' hover-class="navigator-hover"><text>再来
+        一单</text></view>
+        <view class="btn" style='background:#fe5655;' hover-class="navigator-hover"><text>再次
+        选购</text></view>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="price">金额：<text>{{orderItem.price}}</text></view>
+      <block wx:if="{{orderItem.ordersStatus == 0}}">
+        <view class="btn" catchtap='toCancel' data-order='{{orderItem.ordersNo}}' data-idt="{{idt}}" hover-class="navigator-hover">取消订单</view>
+        <view catchtap='toPay' class="btn" data-order='{{orderItem.ordersNo}}' data-idt="{{idt}}" hover-class="navigator-hover" url='/pages/orders/orderPay/orderPay?ordersNo={{orderItem.ordersNo}}'>去付款</view>
+      </block>
+      <block wx:elif="{{orderItem.ordersStatus == 2}}">
+        <view class="tips">待审核</view>
+      </block>
+      <block wx:elif="{{orderItem.ordersStatus == 3}}">
+        <view class="tips">待签收</view>
+      </block>
+      <block wx:elif="{{orderItem.ordersStatus == 4}}">
+        <view class="btn" catchtap='toConfirm' data-order='{{orderItem.ordersNo}}' data-idt="{{idt}}" hover-class="navigator-hover">确认收货</view>
+      </block>
+      <block wx:elif="{{orderItem.ordersStatus == 8}}">
+        <view class="btn" catchtap='showTel' hover-class="navigator-hover">申请售后</view>
+        <view class="tips">订单完成</view>
+      </block>
+      <block wx:elif="{{orderItem.ordersStatus == 14}}">
+        <view class="tips">退款成功</view>
+      </block>
+      <block wx:elif="{orderItem.ordersStatus == 5 || orderItem.ordersStatus == 6 || orderItem.ordersStatus == 7}}">
+        <view class="btn" catchtap='toDel' data-order='{{orderItem.ordersNo}}' data-idt="{{idt}}" hover-class="navigator-hover">删除订单</view>
+        <view class="tips">已取消</view>
+      </block>
+    </view>
+  </navigator>
+  <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  <view class="toTop" catchtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+</view>

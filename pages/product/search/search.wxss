@@ -1,0 +1,230 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**search.wxss**/
+
+.container {
+  display: block;
+  padding-bottom: 120rpx;
+}
+
+.search {
+  width: 100%;
+  height: 84rpx;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #eaeaea;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.search .ipt {
+  width: 710rpx;
+  z-index: 20;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 60rpx;
+  text-align: left;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 10rpx;
+  right: 20rpx;
+  border: 1px solid #eaeaea;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+}
+
+.search .ipt icon {
+  z-index: 21;
+  position: absolute;
+  top: 10rpx;
+  left: 8rpx;
+}
+
+.resTip{
+width: 100%;
+height: 64rpx;
+line-height: 64rpx;
+padding-top: 18rpx;
+font-size: 28rpx;
+text-align: center;
+color: #999;
+border-bottom: 1px solid #eaeaea;
+}
+
+.search-hot {
+  width: 750rpx;
+  display: block;
+  padding: 15rpx;
+  padding-top:5rpx;
+  border-bottom: 1px solid #eaeaea;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.search-hot .title {
+  width: 100%;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding-left: 6rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #999;
+  box-sizing: border-box;
+}
+
+.search-hot .item {
+  width: 228rpx;
+  float: left;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 6rpx;
+  font-size: 28rpx;
+  border: 1px solid #999;
+  text-align: center;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+}
+
+.search-his {
+  width: 750rpx;
+  display: block;
+  overflow: hidden;
+}
+
+.search-his .title {
+  width: 100%;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding-left: 21rpx;
+  padding-top: 15rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #999;
+  box-sizing: border-box;
+}
+
+.search-his .item {
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  width: 100%;
+  background: url(http://image.asj.com/images/O2O/icon-arr-gray-102.png) no-repeat right center;
+  background-size: contain;
+}
+
+.search-his .item .txt {
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  width: 97%;
+  padding-left: 50rpx;
+  font-size: 32rpx;
+  left: 3%;
+  border-bottom: 1px solid #e4e4e4;
+  background: url(http://image.asj.com/images/O2O/icon-address-his-gray-34.png) no-repeat 10rpx 30rpx;
+  background-size: 36rpx;
+  box-sizing: border-box;
+}
+
+.search-pds {
+  width: 750rpx;
+  display: block;
+  overflow: auto;
+}
+
+.search-pds .title {
+  width: 730rpx;
+  height: 72rpx;
+  line-height: 72rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.search-pds .pd {
+  width: 650rpx;
+  position: relative;
+  padding: 10rpx 0;
+  display: block;
+  overflow: hidden;
+  padding-left: 20rpx;
+  padding-right: 80rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.search-pds .pd image {
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+}
+
+.search-pds .pd .tit {
+  height: 46rpx;
+  line-height: 46rpx;
+  font-size: 28rpx;
+  float: left;
+  margin-left: 16rpx;
+  clear: right;
+  width: 470rpx;
+}
+
+.search-pds .pd .shopName {
+  padding-left: 50rpx;
+  background: url(http://image.asj.com/images/O2O/ms/shop_default_logo.png) no-repeat left center;
+  background-size: contain;
+  width: 420rpx;
+}
+
+.search-pds .pd .tit .salePri {
+  color: #e20831;
+}
+
+.search-pds .pd .tit .marketPri {
+  display: inline-block;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 12rpx;
+}
+
+.search-pds .pd .isSend {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 0 16rpx;
+  color: #f00;
+  background-color: #ccc;
+}
+
+.search-pds .pd .addCart {
+  position: absolute;
+  right: 20rpx;
+  bottom: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://image.asj.com/images/O2O/icon-cart-60.png) no-repeat;
+  background-size: cover;
+  z-index: 8;
+}
+
+.search-pds .toBuy {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #FFF;
+  background-color: #e30830;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.search-pds .soldOut {
+  background-color: #999;
+}

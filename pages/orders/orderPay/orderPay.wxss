@@ -1,0 +1,142 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**orderPay.wxss**/
+page{
+  background-color: #f2f2f2;
+}
+.container {
+  display: block;
+  font-family: 'arial', '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53';
+  font-size: 28rpx;
+}
+
+
+.menus {
+  margin-bottom: 30rpx;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.menus .menu {
+  width: 100%;
+  line-height: 100rpx;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+}
+
+.menus .menu .title {
+  color: #999;
+  width: 26%;
+  float: left;
+}
+
+.menus .menu .content {
+  width: 74%;
+  float: right;
+  position: relative;
+  display: none;
+}
+
+.menus .menu .content .send {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 4%;
+  top: 10rpx;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+.menus .menu .SendTime {
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.menus .menu .edit {
+  background: url(http://pls.asj.com/images/O2O/icon-pencil-blue-130.png) no-repeat 8rpx 4rpx;
+  background-size: 82rpx;
+}
+
+.menus .menu .save {
+  background: url(http://pls.asj.com/images/O2O/icon-code-color-100.png) no-repeat 8rpx 4rpx;
+  background-size: 82rpx;
+}
+
+.menus .menu .takeAddress {
+  padding: 30rpx 0;
+  line-height: 40rpx;
+}
+
+.menus .menu .coupon {
+  color: #372070;
+}
+
+.menus .menu .balancePay {
+  color: #999;
+}
+
+.menus .menu .pri {
+  color: #f00;
+}
+
+.menus .menu .on {
+  display: block;
+  border-top: 1px solid #ddd;
+}
+
+.menus .menu .isSel {
+  display: block;
+}
+
+.menus .menu .content .sel {
+  display: none;
+}
+
+.menus .menu .isSel .sel {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 10rpx;
+  left: 8rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-right-green-40.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .menu .arr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-arr-gray-102.png) no-repeat right;
+  background-size: contain;
+  transition: 500ms;
+}
+
+.menus .menu .down {
+  transform: rotate(90deg);
+}
+
+.goPay {
+  width: 86%;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  background-color: #fe5655;
+  color: #FFF;
+  border-radius: 10rpx;
+  position: relative;
+  left: 7%;
+}

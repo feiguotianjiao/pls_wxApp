@@ -1,0 +1,51 @@
+<!--catePds.wxml-->
+<view class="container">
+  <view class="tip">附近{{shopNum}}个门店，共{{pdTotalNum}}件商品</view>
+  <view class="changePds" style="top:{{changeTop}}rpx;">
+    <view class="toChange change-cate {{cateSel}}" hover-class="navigator-hover" catchtap="changeCate">{{sel_typeName}}</view>
+    <view class="toChange change-sort {{sortSel}}" hover-class="navigator-hover" catchtap="changeSort">{{sel_sortName}}</view>
+    <view class="container-cate" style="{{cate_style}}">
+      <view class="second_list">
+        <block wx:for="{{type_list}}"  wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+          <view wx:if="{{itemName.cateId == sel_cateId}}" class="secondName sel" hover-class="navigator-hover" catchtap>{{itemName.cateName}}</view>
+          <view wx:else class="secondName" hover-class="navigator-hover" data-types="{{itemName.typeList}}" data-second="{{itemName.cateId}}" catchtap="selType">{{itemName.cateName}}</view>
+        </block>
+      </view>
+      <view class="type_list">
+        <block wx:for="{{sel_types}}"  wx:for-item="typeItem" wx:for-index="idx" wx:key="{{idx}}">
+          <view class="type" data-typename="{{typeItem.typeName}}" data-typeid="{{typeItem.typeId}}" hover-class="navigator-hover" catchtap="toChangeType">{{typeItem.typeName}}</view>
+        </block>
+      </view>
+    </view>
+    <view class="container-sort" style="{{sort_style}}">
+      <view hover-class="navigator-hover" data-sortname="默认排序" data-searchvalue ="0" class="item" catchtap="toChangeSort">默认排序</view>
+      <view hover-class="navigator-hover" data-sortname="价格升序" data-searchvalue ="3" class="item" catchtap="toChangeSort">价格升序</view>
+      <view hover-class="navigator-hover" data-sortname="价格降序" data-searchvalue ="2" class="item" catchtap="toChangeSort">价格降序</view>
+      <view hover-class="navigator-hover" data-sortname="热　销" data-searchvalue ="1" class="item" catchtap="toChangeSort">热　销</view>
+    </view>
+  </view>
+  <view class="catePds">
+    <navigator wx:for="{{pdList}}"  wx:for-item="pdItem" wx:for-index="idp" wx:key="{{idp}}" url="/pages/product/detail/detail?shopId={{pdItem.shopId}}&pdId={{pdItem.pdId}}" class="pd">
+      <image src="{{pdItem.imageurl}}"/>
+      <view class="tit overTxt">{{pdItem.pdName}}</view>
+      <view class="tit">{{pdItem.model}} </view>
+      <view class="tit">
+        <text class="salePri">￥{{pdItem.promotePrice}}</text>
+        <view class="marketPri">{{pdItem.price}}</view>
+      </view>
+      <navigator catchtap url="/pages/shop/detail/detail?shopId={{pdItem.shopId}}" class="tit shopName overTxt">{{pdItem.shopName}}</navigator>
+      <view wx:if="{{pdItem.isSelling}}" class="addCart" data-pdid='{{pdItem.pdId}}' data-shopid='{{pdItem.shopId}}' catchtap="addCart"></view>
+      <view wx:else class="toBuy soldOut" >已售罄</view>
+    </navigator>
+    <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  </view>
+  <view id="nav">
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/product/cart/cart" class="cart">
+    <view class="count">{{cartCount}}</view>
+   </navigator>
+  </view>
+  <view class="toTop" catchtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+</view>

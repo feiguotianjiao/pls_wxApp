@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search_address" style="display:none;">
+    <view class="ipt_mask" style="{{ipt_mask_style}}" catchtap="showCity"></view>
+    <input disabled="{{ipt_disabled}}" focus="{{ipt_focus}}" type="text" class="ipt" style="{{search_address_style}}" placeholder="选择城市、小区、写字楼、学校" placeholder-style="color:#999;">
+      <icon type="search" size="20" color="#CCC" />
+    </input>
+    <view bindtap="select_city" class="city_name overTxt" style="{{city_name_style}}">{{city_name}}</view>
+  </view>
+  <view bindtap="goMap" style="{{goMap_style}}" class="goMap" hover-class="navigator-hover">
+    <view class="inner">点击去地图选择地点</view>
+  </view>
+  <view wx:if="{{hisAddress_list.length == 0}}" style="{{noSet_style}}" class="noSet">
+    <view class="tipImg">
+      <image src="http://image.asj.com/images/O2O/icon_address_add.png"/>
+    </view>
+    <view class="tipTxt">
+      <text>欢迎使用拍立送\n请先选定您的送货位置</text>
+    </view>
+  </view>
+  <view class="hisAddress_list" style="{{hisAddress_style}}" wx:if="{{hisAddress_list.length > 0}}">
+    <view class="title">历史收货地址</view>
+    <block wx:for="{{hisAddress_list}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <view bindtap="selectAddress" data-obj="{{itemName}}" data-addrname='{{itemName.addrName}}' class="address_con" hover-class="navigator-hover">
+        <view wx:if="{{idx == 0}}" class="address_txt sel">{{itemName.detailAddress}}</view>
+        <view wx:else class="address_txt">{{itemName.detailAddress}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="select_city" style="{{select_city_style}}">
+    <view class="title">
+      <view class="txt">已开通的城市</view>
+    </view>
+    <view wx:for="{{city_list}}" wx:key="*this" bindtap="set_city" class="city" data-city="{{item}}">{{item}}</view>
+  </view>
+  <view id="nav">
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>
+

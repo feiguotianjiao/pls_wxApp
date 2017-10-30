@@ -1,0 +1,28 @@
+<!--list.wxml-->
+<view class="container">
+  <view class="shopTip">附近的商家</view>
+  <navigator wx:for="{{shopList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shop_view">
+    <view class="shop_logo">
+      <image mode="widthFix" src="{{itemName.shopLogo}}" />
+    </view>
+    <view class="name">{{itemName.shopName}}</view>
+    <view class="time">营业时间：{{itemName.openingTime}} -- {{itemName.endingTime}}</view>
+    <view class="eval-star" style="margin-left:2%;">
+      <image class="grayStar" src="http://image.asj.com/images/O2O/grayStar.png" />
+      <view class="lightStar" style="width:{{itemName.serviceScore * 20}}%;">
+        <image src="http://image.asj.com/images/O2O/lightStar.png" />
+      </view>
+    </view>
+    <view class="distance" isLoad="1" style='display:none;'>0.00km</view>
+    <view class="notice">{{itemName.notice}}</view>
+    <view wx:if="{{!itemName.isSend}}" class="isSend">邮递</view>
+  </navigator>
+  <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  <view class="toTop" catchtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+  <view id="nav">
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

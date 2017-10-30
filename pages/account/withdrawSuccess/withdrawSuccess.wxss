@@ -1,0 +1,54 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**withdrawSuccess.wxss**/
+
+.container {
+  display: block;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+}
+
+.btn {
+  width: 92%;
+  margin-bottom: 40rpx;
+  margin-left: 4%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 12rpx;
+  background-color: #372070;
+}
+.index{
+  color: #372070;
+  border-radius: 12rpx;
+  border: 1px solid #372070;
+  background-color: #FFF;
+  box-sizing: border-box;
+}
+
+.tip {
+  width: 92%;
+  margin-left: 4%;
+  padding-top: 40rpx;
+  line-height: 38rpx;
+  color: #666;
+}
+
+.botTip {
+  margin-top: 60rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.topTip {
+  padding: 40rpx 0;
+  padding-left: 40rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-right-green-40.png) no-repeat left 40rpx;
+  background-size: 40rpx;
+}

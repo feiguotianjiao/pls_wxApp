@@ -1,0 +1,69 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/product/cateList/cateList",
+    "pages/product/cart/cart",
+    "pages/orders/orderList/orderList",
+    "pages/member/myIndex/myIndex",
+    "pages/member/about/about",
+    "pages/member/setAddress/setAddress",
+    "pages/member/myCoupon/myCoupon",
+    "pages/member/manageAddress/manageAddress",
+    "pages/member/addAddress/addAddress",
+    "pages/account/balance/balance",
+    "pages/account/balanceDetail/balanceDetail",
+    "pages/account/withdraw/withdraw",
+    "pages/account/withdrawSuccess/withdrawSuccess",
+    "pages/product/detail/detail",
+    "pages/product/subject/subject",
+    "pages/product/catePds/catePds",
+    "pages/product/search/search",
+    "pages/shop/list/list",
+    "pages/shop/detail/detail",
+    "pages/orders/writeOrder/writeOrder",
+    "pages/orders/orderPay/orderPay",
+    "pages/orders/detail/detail",
+    "pages/orders/success/success",
+    "pages/common/shopCart/shopCart"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#382070",
+    "navigationBarTitleText": "拍立送—1小时极速达",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color": "#555",
+    "selectedColor": "#382070",
+    "backgroundColor": "#FFF",
+    "borderStyle": "black",
+    "position":"bottom",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "text":"首页",
+      "iconPath":"pages/images/tabBar_home.png",
+      "selectedIconPath": "pages/images/tabBar_home_selected.png"
+    },{
+      "pagePath": "pages/product/cateList/cateList",
+      "text": "分类",
+      "iconPath": "pages/images/tabBar_cates.png",
+      "selectedIconPath": "pages/images/tabBar_cates_selected.png"
+    },{
+      "pagePath": "pages/product/cart/cart",
+      "text": "购物车",
+      "iconPath": "pages/images/tabBar_cart.png",
+      "selectedIconPath": "pages/images/tabBar_cart_selected.png"
+    },
+    {
+      "pagePath": "pages/orders/orderList/orderList",
+      "text": "订单",
+      "iconPath": "pages/images/tabBar_orders.png",
+      "selectedIconPath": "pages/images/tabBar_orders_selected.png"
+    },{
+      "pagePath": "pages/member/myIndex/myIndex",
+      "text": "我的",
+      "iconPath": "pages/images/tabBar_my.png",
+      "selectedIconPath": "pages/images/tabBar_my_selected.png"
+    }]
+  }
+}

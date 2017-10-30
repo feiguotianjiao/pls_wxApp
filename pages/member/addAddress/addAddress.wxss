@@ -1,0 +1,69 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**setAddress.wxss**/
+page {
+  background-color: #f4f4f4;
+}
+.container{
+  display: block;
+  overflow: hidden;
+}
+.mesCon{
+  width: 100%;
+  background-color: #FFF;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+.mesCon .tit{
+  width: 140rpx;
+  text-align: center;
+  float: left;
+}
+.mesCon .ipt{
+  width: 560rpx;
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 0px none;
+}
+.mesCon .toMap{
+  float: left;
+  width: 550rpx;
+  padding-left: 40rpx;
+  padding-right: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-address-oth-gray-34.png) no-repeat 3rpx center;
+  background-size: 34rpx;
+  color: #CCC;
+  border-bottom: 1px solid #eee;
+}
+.mesCon .isSet{
+  background: url(http://pls.asj.com/images/O2O/icon-address-oth-sel-34.png) no-repeat 3rpx center;
+  background-size: 34rpx;
+  color: #333;
+}
+.mesCon .addressDetail{
+  margin-left: 140rpx; 
+}
+.toSave{
+  width: 92%;
+  text-align: center;
+  height: 80rpx;
+  margin-left: 4%;
+  line-height: 80rpx;
+  margin-top: 120rpx;
+  font-size: 32rpx;
+  color: #FFF;
+  background-color: #372070;
+  border-radius: 12rpx;
+}
+@import "/utils/wetoast/wetoast.wxss";

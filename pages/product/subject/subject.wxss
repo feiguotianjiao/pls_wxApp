@@ -1,0 +1,107 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**subject.wxss**/
+.container{
+  display: block;
+  padding-bottom: 120rpx;
+}
+.banner{
+  width: 100%;
+  height: 469rpx;
+}
+.subject_list{
+  width: 100%;
+  overflow: auto;
+  display: block;
+  white-space: nowrap;
+  height: 72rpx;
+}
+
+.subject_list navigator{
+  padding:0 30rpx;
+  font-size: 28rpx;
+  color: #FFF;
+  background-color: #EC3E5E;
+  height: 52rpx;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+  display: inline-block;
+  margin:10rpx;
+}
+.floor_title{
+  width: 98%;
+  font-size: 32rpx;
+  color: #FFF;
+  background-color: #ac6a00;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 10rpx;
+  margin:0 1%;
+  margin-bottom: 16rpx;
+  text-align: center;
+  font-weight: bold;
+}
+.floor_Pds{
+  width: 100%;
+  overflow: auto;
+}
+.floor_Pd{
+  width: 48%;
+  padding: 8rpx;
+  margin: 0 1%;
+  background-color: #FFF;
+  margin-bottom: 16rpx;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+}
+.floor_Pd image {
+  width: 100%;
+  height: 344rpx;
+  display: block;
+}
+
+.floor_Pd .addCart {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color: #FFF;
+  background-color: #e30830;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.floor_Pd .soldOut {
+  color: #FFF;
+  background-color: #999;
+}
+.floor_Pd .tit {
+  height: 42rpx;
+  line-height: 42rpx;
+  clear: both;
+  width: 100%;
+}
+
+.floor_Pd .tit .salePri {
+  color: #e20831;
+}
+
+.floor_Pd .tit .marketPri {
+  display: inline-block;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 12rpx;
+}
+.describe{
+  display: block;
+  padding: 10rpx 20rpx;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: #ac6a00;
+}

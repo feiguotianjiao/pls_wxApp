@@ -1,0 +1,23 @@
+<!--manageAddress.wxml-->
+<view class="container">
+  <view class="title">
+    历史收货地址
+    <navigator open-type='redirect' url='/pages/member/addAddress/addAddress' class='addAddress'>+ 新增收货地址 </navigator>
+  </view>
+  <view class="hisAddress_list">
+    <block wx:for="{{hisAddress_list}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <view class="address_con" hover-class="navigator-hover">
+        <view class="member_txt">{{itemName.name}}　{{itemName.mobile}}</view>
+        <view class="address_txt">{{itemName.detail}}　</view>
+        <view class='delete' catchtap='delAddress' data-adid='{{itemName.adId}}' data-index='{{idx}}'></view>
+        <navigator open-type='redirect' url='/pages/member/addAddress/addAddress?adId={{itemName.adId}}&n={{itemName.name}}&m={{itemName.mobile}}&d={{itemName.detailAddress}}&addrName={{itemName.city}}{{itemName.area}}{{itemName.street}}' class='edit'></navigator>
+      </view>
+    </block>
+  </view>
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>
+

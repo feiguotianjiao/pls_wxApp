@@ -1,0 +1,115 @@
+<!--writeOrder.wxml-->
+<import src="/utils/wetoast/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="container">
+  <view class="tip overTxt">
+    <text class="pre">送至</text>　{{preAddr}}
+  </view>
+  <view wx:if="{{!isSend}}" class='noSendTip'>{{userData.noSendStr}}</view>
+  <view class="writeMes">
+    <view class="address">
+      <input type="text" bindblur="changeIptVal" data-ipt="address" value='{{addressDetail}}' class="ipt" placeholder="输入详细送货地址（如9栋1单元401）" />
+    </view>
+    <view class="name">
+      <input type="text" bindblur="changeIptVal" data-ipt="name" value='{{userData.consignee}}' class="ipt" placeholder="输入收货人姓名" />
+    </view>
+    <view class="phone">
+      <input type="text" bindblur="changeIptVal" data-ipt="mobile" value='{{mobile}}' class="ipt" placeholder="输入联系方式" />
+    </view>
+  </view>
+  <view class="menus">
+    <view class="menu" style="border-top:0px none;">
+      <view class="arr {{payClass[0]}}"></view>
+      <view class="title">支付方式</view>
+      <view class="content {{payClass[1]}}" catchtap="changePay" data-index="1" style="border-top:0px none;">在线支付
+        <view class="sel"></view>
+      </view>
+      <view class="content {{payClass[2]}}" catchtap="changePay" data-index="2">货到付款
+        <view class="sel"></view>
+      </view>
+    </view>
+  </view>
+  <view class="menus">
+    <view class="menu" style="border-top:0px none;">
+      <view class="title">配送方式</view>
+      <view class="content on" style="border-top:0px none;">
+        <view wx:if="{{isSend}}" class="send {{sendClass[0]}}" catchtap="changeSend" data-index="0">送货到家
+          <view class="sel"></view>
+        </view>
+        <view class="send {{sendClass[1]}}" catchtap="changeSend" data-index="1" style="border-right:0px none;">门店自提
+          <view class="sel"></view>
+        </view>
+      </view>
+    </view>
+    <view class="menu">
+      <view class="title">{{takeWay}}时间</view>
+      <view class="content isSel sendTime {{sendTimeClass}}" catchtap="sendTimeShow">
+        <view style="width:50%;float:left;text-align:center;">星期{{day}}</view>
+        <view style="width:50%;float:left;">{{time}}</view>
+        <picker-view indicator-style="height: 36px;" style="width: 100%; height: 108px;float:left;{{pickerShow}}" value="{{value}}" bindchange="sendTimeChange">
+          <picker-view-column>
+            <view wx:for="{{days}}" wx:key="*this" style="text-align:center;line-height: 36px">星期{{item}}</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{times}}" wx:key="*this" style="line-height: 36px">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+    </view>
+    <view class="menu" style="{{takeShow}}">
+      <view class="title">自提地址</view>
+      <view class="content isSel takeAddress">
+        {{userData.shopAddress}}
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{false}}" class="menus">
+    <view class="menu" style="border-top:0px none;">
+      <view class="arr {{payClass[0]}}"></view>
+      <view class="title">优惠信息</view>
+      <view class="content isSel coupon" style="border-top:0px none;" catchtap="toAddCoupon">+添加优惠券</view>
+    </view>
+  </view>
+  <input class="orderIpt" bindblur="changeIptVal" data-ipt="notice" placeholder="请输入订单特殊要求（如带包烟）" />
+  <view class="orderPds">
+    <block wx:for="{{userData.cartList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <view wx:if="{{idx == 0}}" class="pd" style="border-top:0px none;">
+        <view class="name overTxt">{{itemName.pdName}}</view>
+        <view class="pri">{{itemName.price}}</view>
+        <view class="count">×{{itemName.num}}</view>
+      </view>
+      <view wx:else class="pd">
+        <view class="name overTxt">{{itemName.pdName}}</view>
+        <view class="pri">{{itemName.price}}</view>
+        <view class="count">×{{itemName.num}}</view>
+      </view>
+    </block>
+    <view class="totalTip"><text style="font-weight:bold;">商品合计：</text>{{userData.totalNum}}　<text style="color:#f00;">{{userData.totalPrice}}</text></view>
+  </view>
+  <navigator open-type="navigateBack" class="goShop">返回修改商品</navigator>
+  <view class="toOrder">
+    <view class="pri">实付 <text style="color:#F00;">￥{{totalPay}}</text></view>
+    <view class="btn" catchtap="toSubmit" hover-class="navigator-hover">立即下单</view>
+  </view>
+  <view class="addCoupon" catchtouchmove catchtap style="{{couponShow}}">
+    <view class="couponPop">
+      <view class="title">绑定优惠券</view>
+      <view class="mesContainer">
+        <view class="iptCon">
+          <input class="ipt" placeholder="优惠券号" />
+        </view>
+        <view class="iptCon">
+          <input class="ipt toCode" placeholder="验证码" />
+          <view class="img">
+            <image mode="aspectFit" src="{{codeImg}}" catchtap="changeCodeImg"></image>
+          </view>
+          <view class="freash" catchtap="changeCodeImg"></view>
+        </view>
+      </view>
+      <view class="btns">
+        <view class="toBind" hover-class="navigator-hover" catchtap="bindCoupon">立即绑定</view>
+        <view class="toCancel" hover-class="navigator-hover" catchtap="cancelBindCounpon">取消</view>
+      </view>
+    </view>
+  </view>
+</view>

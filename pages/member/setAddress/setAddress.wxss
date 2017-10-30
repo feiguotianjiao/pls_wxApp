@@ -1,0 +1,207 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**setAddress.wxss**/
+
+page {
+  background-color: #f4f4f4;
+}
+.container{
+  display: block;
+}
+.search_address {
+  width: 100%;
+  height: 92rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.search_address .ipt {
+  width: 690rpx;
+  z-index: 20;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 60rpx;
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 14rpx;
+  right: 30rpx;
+  border: 1px solid #eaeaea;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+}
+
+.search_address .ipt_mask {
+  width: 100%;
+  height: 100%;
+  z-index: 30;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.search_address .ipt icon {
+  z-index: 20;
+  position: absolute;
+  top: 10rpx;
+  left: 8rpx;
+}
+
+.city_name {
+  position: absolute;
+  top: 14rpx;
+  left: 20rpx;
+  width: 140rpx;
+  display: none;
+  padding-right: 46rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  background: url(http://image.asj.com/images/O2O/icon-new-down.png) no-repeat right 14rpx;
+  background-size: 40rpx;
+}
+
+.goMap {
+  display: block;
+  width: 100%;
+  margin-top: 20rpx;
+  margin-bottom: 18rpx;
+  height: 100rpx;
+  background: url(http://image.asj.com/images/O2O/location-eye.png) no-repeat 20rpx center #fff;
+  background-size: 44rpx;
+}
+
+.goMap .inner {
+  width: 660rpx;
+  padding-left: 80rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+  color: #47b34f;
+  background: url(http://image.asj.com/images/O2O/address_arrow_icon.png) no-repeat center right;
+  background-size: 22rpx;
+}
+
+.noSet {
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  padding-bottom: 200rpx;
+  padding-top: 60rpx;
+  border-top: 1px solid #eaeaea;
+}
+
+.noSet .tipImg {
+  width: 260rpx;
+  height: 256rpx;
+  margin: 0 auto;
+  float: none;
+  clear: both;
+  margin-bottom: 40rpx;
+}
+
+.noSet .tipTxt {
+  width: 100%;
+  text-align: center;
+  line-height: 52rpx;
+  font-size: 32rpx;
+}
+
+.hisAddress_list {
+  width: 100%;
+  background-color: #fff;
+  font-size: 32rpx;
+  border-top: 1px solid #eaeaea;
+}
+
+.hisAddress_list .title {
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  width: 94%;
+  left: 3%;
+  color: #999;
+}
+
+.hisAddress_list .address_con {
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  width: 100%;
+  background: url(http://image.asj.com/images/O2O/icon-arr-gray-102.png) no-repeat right center;
+  background-size: contain;
+}
+
+.hisAddress_list .address_con .address_txt {
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  width: 94%;
+  padding-left: 50rpx;
+  left: 3%;
+  border-top: 1px solid #e4e4e4;
+  background: url(http://image.asj.com/images/O2O/icon-address-his-gray-34.png) no-repeat 10rpx 30rpx;
+  background-size: 36rpx;
+}
+
+.hisAddress_list .address_con .sel {
+  background: url(http://image.asj.com/images/O2O/icon-address-his-sel-34.png) no-repeat 10rpx 30rpx;
+  background-size: 36rpx;
+}
+
+.select_city {
+  width: 96%;
+  padding: 0 2%;
+  display: none;
+  font-size: 32rpx;
+}
+
+.select_city .title {
+  width: 100%;
+  display: block;
+  line-height: 50rpx;
+  height: 50rpx;
+  text-align: center;
+  position: relative;
+}
+
+.select_city .title::before {
+  content: '';
+  height: 1px;
+  border-top: 1px dashed #ccc;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  z-index: -1;
+}
+
+.select_city .title .txt {
+  position: relative;
+  padding: 0 20rpx;
+  background-color: #f4f4f4;
+  display: inline-block;
+  line-height: 50rpx;
+  height: 50rpx;
+  color: #b0b0b0;
+}
+
+.select_city .city {
+  padding: 0px 20rpx;
+  position: relative;
+  float: left;
+  height: 56rpx;
+  line-height: 56rpx;
+  margin: 8rpx;
+  border: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+@import "/utils/wetoast/wetoast.wxss";

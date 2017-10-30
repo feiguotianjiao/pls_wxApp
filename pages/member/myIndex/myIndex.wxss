@@ -1,0 +1,131 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**myIndex.wxss**/
+
+page {
+  background-color: #f4f4f4;
+}
+
+.member {
+  display: block;
+  width: 690rpx;
+  background-color: #fff;
+  padding: 12rpx 30rpx;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.member .img {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 50%;
+  float: left;
+}
+
+.member .nickname {
+  float: left;
+  width: 560rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  margin-left: 20rpx;
+  margin-top: 8rpx;
+  font-size: 28rpx;
+  clear: right;
+}
+
+.member .level {
+  float: left;
+  width: 520rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-left: 20rpx;
+  clear: right;
+  color: #999;
+  padding-left: 40rpx;
+  background: url(http://image.asj.com/images/O2O/icon-level-gray-35.png) no-repeat left;
+  background-size: contain;
+}
+
+.menus {
+  width: 100%;
+  margin-top: 30rpx;
+  border-top: 1px solid #e4e4e4;
+}
+
+.menus .item {
+  width: 720rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  background: url(http://image.asj.com/images/O2O/icon-arr-gray-102.png) no-repeat right #fff;
+  background-size: contain;
+  border-bottom: 1px solid #e4e4e4;
+  padding-left: 30rpx;
+  font-size: 36rpx;
+}
+
+.menus .item .con {
+  padding-left: 60rpx;
+  height: 102rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.menus .item .order {
+  background: url(http://image.asj.com/images/O2O/icon-order-gray-51.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .item .order .count {
+  position: absolute;
+  right: 70rpx;
+  top: 34rpx;
+  border-radius: 20rpx;
+  background-color: #e50039;
+  padding: 0 20rpx;
+  color: #fff;
+  height: 32rpx;
+  font-size: 24rpx;
+  line-height: 32rpx;
+}
+
+.menus .item .about {
+  background: url(http://image.asj.com/images/O2O/icon-about-gray-51.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .item .balance {
+  background: url(http://image.asj.com/images/O2O/icon-balance-gray-51.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .item .coupon {
+  background: url(http://image.asj.com/images/O2O/icon-coupon-gray-51.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .item .address {
+  background: url(http://image.asj.com/images/O2O/icon-address-gray-51.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .item .tel {
+  background: url(http://image.asj.com/images/O2O/icon-tel-gray-51.png) no-repeat;
+  background-size: contain;
+  font-weight: bold;
+}
+
+.footer {
+  padding: 120rpx 30rpx;
+  padding-left: 70rpx;
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+  color: #999;
+  background: url(http://image.asj.com/images/O2O/icon-tip-gray-40.png) no-repeat;
+  background-size: 40rpx;
+  background-position: 32rpx 120rpx;
+}
+@import "/utils/wetoast/wetoast.wxss";

@@ -1,0 +1,47 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**withdraw.wxss**/
+.container{
+  display: block;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+}
+.withdrawIpt{
+  width: 92%;
+  margin: 40rpx 0;
+  margin-left: 4%;
+  padding: 0 2%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 12rpx;
+  background-color: #FFF;
+}
+.withdrawBtn{
+  width: 92%;
+  margin-left: 4%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #FFF;
+  border-radius: 12rpx;
+  background-color: #372070;
+}
+.tip{
+  width: 92%;
+  margin-left: 4%;
+  padding-top: 40rpx;
+  line-height: 38rpx;
+  color: #666;
+}
+.botTip{
+  margin-top: 60rpx;
+  font-size: 28rpx;
+  text-align: center;
+}
+.topTip{
+  padding-top: 80rpx;
+}

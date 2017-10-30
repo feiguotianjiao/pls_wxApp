@@ -1,0 +1,48 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**balanceDetail.wxss**/
+.container{
+  display: block;
+  background-color: #f2f2f2;
+  padding-bottom: 120rpx;
+}
+.detailCon{
+  width: 96%;
+  padding: 20rpx 2%;
+  border-bottom: 1px solid #CCC;
+  overflow: hidden;
+}
+.detailCon .mes{
+  max-width: 72%;
+  font-size: 32rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  float: left;
+}
+.detailCon .mes .tip{
+  color: #999;
+}
+.detailCon .time{
+  max-width: 72%;
+  font-size: 28rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+}
+.detailCon .money{
+  max-width: 28%;
+  font-size: 42rpx;
+  height: 86rpx;
+  line-height: 86rpx;
+  float: right;
+}
+.detailCon .in{
+  color: #e50039;
+}
+.detailCon .out{
+  color: #00af25;
+}

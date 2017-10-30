@@ -1,0 +1,151 @@
+<!--index.wxml-->
+<import src="/utils/wetoast/wetoast.wxml" />
+<template is="wetoast" data="{{...__wetoast__}}" />
+<view class="container">
+  <view id="search" bindtap="getFields" style="{{topSearchStyle}}">
+    <view bindtap="toSweep" class="sweep">
+      <image mode="aspectFit" src="http://pls.asj.com/images/O2O/icon-white-sweep-40.png" />
+    </view>
+    <navigator open-type="navigate" url="/pages/product/search/search" style="{{searchIptStyle}}" class="ipt">搜索附近的店铺商品</navigator>
+  </view>
+  <view id="midSearch" style="{{midSearchStyle}}">
+    <view bindtap="toSweep" class="sweep">
+      <image mode="aspectFit" src="http://pls.asj.com/images/O2O/icon-gray-sweep-40.png" />
+    </view>
+    <navigator url="/pages/member/setAddress/setAddress" class="address overTxt">{{preAddr}}</navigator>
+    <navigator url="/pages/product/search/search" class="toSearch"></navigator>
+  </view>
+  <swiper class="index_swiper" circular autoplay interval="2000" duration="500">
+    <block wx:for="{{swiperImg}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <swiper-item bindtap="toSubject" data-url="/pages/product/subject/subject?subjectId={{itemName.subjectId}}">
+        <image src="{{itemName.image}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="index_address">
+    <navigator url="/pages/member/setAddress/setAddress" class="to_address">
+      <view class="address_img">
+        <image mode="widthFix" src="http://image.asj.com/images/O2O/address-topic.png?t=2017010600" />
+      </view>
+      <view class="address_txt overTxt">{{preAddr}}</view>
+    </navigator>
+  </view>
+  <view class="toConnect">
+    <view catchtap="showTel" class="showTel" hover-class='navigator-hover'>
+      <image mode="widthFix" src="http://image.asj.com/images/O2O/telImg.png" />
+    </view>
+    <view class="scan" bindtap="toSweep" hover-class='navigator-hover'>
+      <image mode="widthFix" src="http://image.asj.com/images/O2O/sweepImg.png" />
+    </view>
+  </view>
+  <view class="naviator_icons">
+    <navigator class="naviator_icon" wx:for="{{shopCates}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}" url="/pages/shop/list/list?shopCateId={{itemName.scId}}">
+      <image mode="aspectFit" src="{{itemName.scUrl}}" />
+    </navigator>
+  </view>
+  <view class="adList">
+    <block wx:for="{{adbList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+    </block>
+  </view>
+  <view class="bottom_adList">
+    <block wx:for="{{adList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <block wx:if="{{idx < 2}}">
+        <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="productAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+      </block>
+      <block wx:if="{{idx == 2}}">
+        <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="productAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+      </block>
+      <block wx:if="{{idx == 3}}">
+        <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shopAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+      </block>
+      <block wx:if="{{idx == 4}}">
+        <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shopAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </navigator>
+      </block>
+    </block>
+  </view>
+  <view class="shops_tip" bindtap="toModel">
+    <view class="txt">附近的店铺</view>
+  </view>
+  <view class="shops_list">
+    <block wx:for="{{shopList}}" wx:for-index="idx" wx:for-item="itemName" wx:key="{{idx}}">
+      <navigator url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shop_view">
+        <view class="shop_logo">
+          <span class="shop_cartCount" data-id="2" style="display:none;">0</span>
+          <image mode="widthFix" src="{{itemName.shopLogo}}" />
+        </view>
+        <view class="name">{{itemName.shopName}}</view>
+        <view class="time">营业时间：{{itemName.openingTime}} -- {{itemName.endingTime}}</view>
+        <view class="eval-star" style="margin-left:2%;">
+          <image class="grayStar" src="http://image.asj.com/images/O2O/grayStar.png" />
+          <view class="lightStar" style="width:{{itemName.serviceScore * 20}}%;">
+            <image src="http://image.asj.com/images/O2O/lightStar.png" />
+          </view>
+        </view>
+        <view class="distance" isLoad="1" lat="{{itemName.lat}}" lon="{{itemName.lon}}" style='display:none;'>0.00km</view>
+        <view class="notice">{{itemName.notice}}</view>
+        <view wx:if="{{!itemName.isSend}}" class="isSend">邮递</view>
+      </navigator>
+      <view class="shop_goods">
+        <block wx:for="{{itemName.pdlist}}" wx:for-index="idt" wx:for-item="pdItem" wx:key="{{idt}}">
+          <navigator url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{pdItem.pdId}}" class="shop_good">
+            <view class="img">
+              <image src="{{pdItem.imageurl}}" />
+              <view wx:if="{{false}}" class="tip">热 销</view>
+            </view>
+            <view wx:if="{{pdItem.promotePrice}}" class="pri">￥{{pdItem.promotePrice}}</view>
+            <view wx:else class="pri">{{pdItem.price}}</view>
+          </navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class="bottom_tipImg">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/banner-640-60-01.jpg" />
+    <navigator class="tel" bindtap="showTel"></navigator>
+  </view>
+  <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  <view class="toTop" catchtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028" />
+  </view>
+</view>

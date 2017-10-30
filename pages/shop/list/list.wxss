@@ -1,0 +1,115 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**list.wxss**/
+.container{
+  display: block;
+  padding-bottom: 120rpx;
+}
+.shopTip {
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #666;
+  padding: 12rpx 20rpx;
+  position: relative;
+  padding-left: 80rpx;
+  width: 650rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-shopx-gray-102.png) no-repeat 20rpx center;
+  background-size: 50rpx;
+  border-bottom: 1px solid #CCC;
+}
+
+.shop_view {
+  width: 734rpx;
+  position: relative;
+  padding: 10rpx;
+  background: url(http://image.asj.com/images/O2O/index_tab_two.png) no-repeat right 20rpx center #fff;
+  background-size: 72rpx;
+  overflow: hidden;
+  border-bottom: 1px solid #CCC;
+}
+
+.shop_view .shop_logo {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  overflow: hidden;
+  border: 1px solid #DDD;
+}
+
+.shop_view .name {
+  float: left;
+  padding-left: 14rpx;
+  width: 500rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shop_view .time {
+  float: left;
+  padding-left: 14rpx;
+  width: 500rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shop_view .eval-star {
+  float: left;
+  height: 36rpx;
+  width: 200rpx;
+  position: relative;
+}
+
+.shop_view .grayStar {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+
+.shop_view .lightStar {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.shop_view .distance {
+  float: left;
+  padding-left: 60rpx;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  white-space: nowrap;
+}
+
+.shop_view .notice {
+  float: left;
+  width: 500rpx;
+  line-height: 36rpx;
+  height: 72rpx;
+  overflow: hidden;
+  padding-left: 14rpx;
+}
+
+.shop_view .isSend {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 0 16rpx;
+  color: #f00;
+  background-color: #ccc;
+}

@@ -1,0 +1,19 @@
+<!--withdraw.wxml-->
+<view class="container">
+  <view class='tip topTip'>
+    提现金额将退回至您的原支付卡中，提现成功后请及时查询您的银行卡信息
+  </view>
+  <input class='withdrawIpt' placeholder='请输入提现的金额'></input>
+  <navigator url='/pages/account/withdrawSuccess/withdrawSuccess' class='withdrawBtn'>提交申请</navigator>
+  <view class='tip'>
+    <text style='color:#e50039;'>注意：拍立送合伙人佣金仅可用于消费，不可提现！</text>申请提现后，拍立送处理时限为3-5个工作日，银行处理时限为2-3个工作日。
+  </view>
+  <view class='tip botTip'>
+    如有疑问，请致电客服电话400-6666-520咨询
+  </view>
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

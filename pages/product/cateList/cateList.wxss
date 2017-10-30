@@ -1,0 +1,118 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**index.wxss**/
+.topTip{
+  width: 100%;
+  text-align: center;
+  font-size: 40rpx;
+  position: relative;
+  top:30%;
+  color: #666;
+}
+.container {
+  height: 100%;
+  display: block;
+}
+
+.search {
+  width: 100%;
+  height: 84rpx;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #eaeaea;
+  position: fixed;
+  box-sizing: border-box;
+}
+
+.search .ipt {
+  width: 710rpx;
+  z-index: 20;
+  height: 64rpx;
+  line-height: 64rpx;
+  padding-left: 60rpx;
+  text-align: left;
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  top: 10rpx;
+  right: 20rpx;
+  border: 1px solid #eaeaea;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+}
+
+.search .ipt icon {
+  z-index: 21;
+  position: absolute;
+  top: 10rpx;
+  left: 8rpx;
+}
+
+.cate_list {
+  width: 190rpx;
+  padding-top: 84rpx;
+  float: left;
+  height: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+.cate_list .cate {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #666;
+  font-size: 32rpx;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cate_list .sel {
+  border-left: 3px solid #382070;
+  background-color: #fff;
+  color: #382070;
+}
+
+.type_list {
+  width: 540rpx;
+  padding-top: 84rpx;
+  float: left;
+  height: 100%;
+  overflow: auto;
+  margin-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.type_list .secondName {
+  width: 100%;
+  height: 56rpx;
+  line-height: 56rpx;
+  color: #9a9a9a;
+  font-size: 28rpx;
+  text-align: left;
+  clear: both;
+}
+
+.type_list .type {
+  width: 160rpx;
+  float:left;
+  padding: 10rpx;
+}
+.type_list .type image{
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+}
+.type_list .type text{
+  width: 160rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  text-align: center;
+  display: block;
+  overflow: hidden;
+}

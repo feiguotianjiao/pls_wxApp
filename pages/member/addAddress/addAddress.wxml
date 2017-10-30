@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<import src="/utils/wetoast/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
+<view class="container">
+  <view class='mesCon'>
+    <text class='tit'>联系人</text>
+    <input maxlength='10' class='ipt' placeholder="请填写收货人姓名" placeholder-style='color:#CCC;' value='{{n}}' data-ipt='name' bindblur='changeIptVal'></input>
+  </view>
+  <view class='mesCon'>
+    <text class='tit'>手机号</text>
+    <input maxlength='15' class='ipt' placeholder="请填写收货人电话号码" placeholder-style='color:#CCC;' value='{{m}}' data-ipt='mobile' bindblur='changeIptVal'></input>
+  </view>
+  <view class='mesCon'>
+    <text class='tit'>配送至</text>
+    <view wx:if="{{addrName}}" catchtap='goMap' class='toMap isSet' hover-class='navigator-hover'>{{addrName}}</view>
+    <view wx:else class='toMap' catchtap='goMap' hover-class='navigator-hover'>请选择小区/写字楼/学校街道等</view>
+    <input class='ipt addressDetail' placeholder="详细地址（门牌号/楼层等）" placeholder-style='color:#CCC;' value='{{addressDetail}}' data-ipt='address' bindblur='changeIptVal'></input>
+  </view>
+  <view class='toSave' catchtap='toSubmit' hover-class='navigator-hover'>保存地址</view>
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>
+

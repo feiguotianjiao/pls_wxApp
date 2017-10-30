@@ -1,0 +1,57 @@
+<!--cart.wxml-->
+<view class="container">
+  <view wx:if="{{cartList.length < 1}}" class='noPds'>
+    <text class='tip'>您的购物车是空的，去选些商品吧~~</text>
+    <navigator class='goInd' open-type='switchTab' url='/pages/index/index'>去首页逛逛</navigator>
+  </view>
+  <block wx:if="{{isSendList.length > 0}}">
+    <view class="isSendTip">
+      <view class="con">地址范围内可配送</view>
+    </view>
+    <navigator wx:for="{{isSendList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}&cartShow=1" class="cartCon">
+      <view class="shopName overTxt">{{itemName.shopName}}</view>
+      <view wx:if="{{itemName.pdlist.length > 4}}" class="pdsCon pdsOverflow">
+        <view class="pd" wx:for="{{itemName.pdlist}}" wx:for-item="pdItem" wx:for-index="idt" wx:key="{{idt}}">
+          <image src="{{pdItem.imageurl}}"/>
+          <text wx:if="{{pdItem.num > 1}}" class="pdCount">{{pdItem.num}}</text>
+          <text class="pri">￥{{pdItem.price}}</text>
+        </view>
+        <view class="totalCount">共{{itemName.totalNum}}件</view>
+      </view>
+      <view wx:else class="pdsCon">
+        <view class="pd" wx:for="{{itemName.pdlist}}" wx:for-item="pdItem" wx:for-index="idt" wx:key="{{idt}}">
+          <image src="{{pdItem.imageurl}}"/>
+          <text wx:if="{{pdItem.num > 1}}" class="pdCount">{{pdItem.num}}</text>
+          <text class="pri">￥{{pdItem.price}}</text>
+        </view>
+        <view class="totalCount">共{{itemName.totalNum}}件</view>
+      </view>
+      <view data-shopid='{{itemName.shopId}}' class="toOrder" catchtap="toWriteOrder">去结算</view>
+    </navigator>
+  </block>
+  <block wx:if="{{noSendList.length > 0}}">
+    <view class="isSendTip noSendTip">
+      <view class="con">超区配送，需联系客服</view>
+    </view>
+    <navigator wx:for="{{noSendList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}&cartShow=1" class="cartCon">
+      <view class="shopName overTxt">{{itemName.shopName}}</view>
+      <view wx:if="{{itemName.pdlist.length > 4}}" class="pdsCon pdsOverflow">
+        <view class="pd" wx:for="{{itemName.pdlist}}" wx:for-item="pdItem" wx:for-index="idt" wx:key="{{idt}}">
+          <image src="{{pdItem.imageurl}}"/>
+          <text wx:if="{{pdItem.num > 1}}" class="pdCount">{{pdItem.num}}</text>
+          <text class="pri">￥{{pdItem.price}}</text>
+        </view>
+        <view class="totalCount">共{{itemName.totalNum}}件</view>
+      </view>
+      <view wx:else class="pdsCon">
+        <view class="pd" wx:for="{{itemName.pdlist}}" wx:for-item="pdItem" wx:for-index="idt" wx:key="{{idt}}">
+          <image src="{{pdItem.imageurl}}"/>
+          <text wx:if="{{pdItem.num > 1}}" class="pdCount">{{pdItem.num}}</text>
+          <text class="pri">￥{{pdItem.price}}</text>
+        </view>
+        <view class="totalCount">共{{itemName.totalNum}}件</view>
+      </view>
+      <view data-pdlist='{{itemName.pdlist}}' data-shopid='{{itemName.shopId}}' class="toOrder" catchtap="toWriteOrder">去结算</view>
+    </navigator>
+  </block>
+</view>

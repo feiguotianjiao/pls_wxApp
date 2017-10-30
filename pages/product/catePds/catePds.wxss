@@ -1,0 +1,205 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**catePds.wxss**/
+.container{
+  display: block;
+}
+.tip {
+  height: 64rpx;
+  line-height: 64rpx;
+  width: 718rpx;
+  padding: 0 16rpx;
+  color: #888;
+  background-color: #f2f2f2;
+}
+
+.changePds {
+  position: fixed;
+  left: 0;
+  top: 64rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  color: #666;
+  width: 750rpx;
+  font-size: 28rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.changePds .toChange{
+  height: 72rpx;
+  padding-right: 30rpx;
+  background: url(http://image.asj.com/images/O2O/botArr.png) no-repeat right center;
+  background-size: 20rpx;
+}
+.changePds .change-cate{
+  float: left;
+  padding-left: 16rpx;
+}
+.changePds .change-sort{
+  float: right;
+  margin-right:16rpx;
+}
+
+.changePds .isSel{
+  background: url(http://image.asj.com/images/O2O/topArr.png) no-repeat right center;
+  background-size: 20rpx;
+  color: #382070;
+}
+.changePds .container-cate{
+  background-color: #FFF;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
+  position: relative;
+  float: left;
+  clear: both;
+  width: 600rpx;
+  height: 800rpx;
+  top:-1px;
+  text-align: center;
+}
+.changePds .second_list{
+  width: 200rpx;
+  height: 100%;
+  overflow: auto;
+  background-color: #f8f8f8;
+  float: left;
+}
+.changePds .second_list .secondName{
+  width: 100%;
+  border: 1px solid #f8f8f8;
+  border-bottom: 1px solid #eee;
+  box-sizing: border-box;
+}
+.changePds .second_list .sel{
+  background-color: #FFF;
+  color: #382070;
+  border-left: 3px solid #382070;
+  box-sizing: border-box;
+}
+.changePds .type_list{
+  width: 400rpx;
+  height: 100%;
+  overflow: auto;
+  float: left;
+}
+.changePds .type_list .type{
+  padding: 0 32rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  border-radius: 12rpx;
+  border:1px solid #EEE;
+  margin: 10rpx;
+  float: left;
+}
+.changePds .container-sort{
+  padding: 0 16rpx;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #eee;
+  border-left: 1px solid #eee;
+  position: relative;
+  float: right;
+  clear: both;
+  top:-1px;
+  text-align: center;
+}
+.changePds .container-sort .item{
+  padding: 0 30rpx;
+  border-bottom: 1px solid #eee;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+.catePds {
+  width: 100%;
+  display: block;
+  padding: 0rpx 7rpx;
+  padding-top:76rpx;
+  padding-bottom: 120rpx;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.catePds .pd {
+  width: 49%;
+  padding: 8rpx;
+  margin: 12rpx 0.5%;
+  background-color: #f8f8f8;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+}
+
+.catePds .pd image {
+  width: 100%;
+  height: 344rpx;
+  display: block;
+}
+
+.catePds .pd .tit {
+  height: 42rpx;
+  line-height: 42rpx;
+  clear: both;
+  width: 100%;
+}
+
+.catePds .pd .shopName {
+  padding-left: 50rpx;
+  background: url(http://image.asj.com/images/O2O/ms/shop_default_logo.png) no-repeat left center;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.catePds .pd .tit .salePri {
+  color: #e20831;
+}
+
+.catePds .pd .tit .marketPri {
+  display: inline-block;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 12rpx;
+}
+
+.catePds .pd .isSend {
+  position: absolute;
+  right: 10rpx;
+  bottom: 50rpx;
+  padding: 0 16rpx;
+  color: #f00;
+  background-color: #ccc;
+}
+
+.catePds .pd .addCart {
+  position: absolute;
+  right: 20rpx;
+  bottom: 50rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://image.asj.com/images/O2O/icon-cart-60.png) no-repeat;
+  background-size: cover;
+  z-index: 8;
+}
+
+.catePds .pd .toBuy {
+  position: absolute;
+  right: 10rpx;
+  bottom: 60rpx;
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #FFF;
+  background-color: #e30830;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.catePds .pd .soldOut {
+  background-color: #999;
+}

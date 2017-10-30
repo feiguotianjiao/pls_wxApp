@@ -1,0 +1,9 @@
+/**about.wxss**/
+.txt{
+  display: block;
+  width: 690rpx;
+  padding: 30rpx;
+  padding-bottom: 120rpx;
+  line-height: 48rpx;
+  font-size: 28rpx;
+}

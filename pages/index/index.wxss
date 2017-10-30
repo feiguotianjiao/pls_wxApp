@@ -1,0 +1,455 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**index.wxss**/
+
+#search {
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+  height: 52rpx;
+  padding: 10rpx 0rpx;
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+}
+
+#search .sweep, #midSearch .sweep {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  margin-top: 4rpx;
+  float: left;
+}
+
+#search .ipt {
+  width: 520rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding-left: 70rpx;
+  padding-right: 0;
+  text-align: left;
+  color: #fff;
+  background: url(http://pls.asj.com/images/O2O/icon-white-search-60.png) no-repeat 0 0;
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-family: 'arial', '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53';
+  -webkit-appearance: none;
+  border-radius: 24rpx;
+  margin-right: 20rpx;
+  float: right;
+  overflow: hidden;
+}
+
+#midSearch {
+  width: 100%;
+  background: #fff;
+  height: 52rpx;
+  padding: 10rpx 0px;
+  z-index: 101;
+  position: fixed;
+  top: 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+#midSearch .address {
+  position: absolute;
+  display: block;
+  width: 44%;
+  left: 28%;
+  height: 48rpx;
+  line-height: 48rpx;
+  padding-top: 2rpx;
+  padding-right: 60rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-new-down.png) no-repeat center right;
+  background-size: contain;
+  color: #666;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#midSearch .toSearch {
+  width: 48rpx;
+  height: 48rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-gray-search-70.png) no-repeat 0 0;
+  background-size: contain;
+  margin-right: 10px;
+  float: right;
+}
+
+.index_swiper {
+  width: 100%;
+  height: 364rpx;
+}
+
+.index_address {
+  width: 100%;
+  height: 82rpx;
+  position: relative;
+}
+
+.to_address {
+  width: 100%;
+  height: 112rpx;
+  position: absolute;
+  display: block;
+  top: -32rpx;
+}
+
+.to_address .address_img {
+  width: 100%;
+  height: 64rpx;
+  display: block;
+}
+
+.to_address .address_txt {
+  height: 48rpx;
+  width: 44%;
+  display: block;
+  float: none;
+  clear: both;
+  margin: 0 auto;
+  line-height: 48rpx;
+  padding-left: 10rpx;
+  padding-right: 60rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-new-down.png) no-repeat center right #eee;
+  background-size: contain;
+  color: #666;
+  border-radius: 24rpx;
+  text-align: center;
+}
+
+.toConnect {
+  width: 730rpx;
+  display: block;
+  padding: 10rpx 0rpx;
+  height: 160rpx;
+  overflow: hidden;
+}
+
+.toConnect .showTel {
+  width: 550rpx;
+  float: left;
+  height: 160rpx;
+}
+
+.toConnect .scan {
+  width: 180rpx;
+  float: left;
+  height: 160rpx;
+}
+
+.naviator_icons {
+  width: 712rpx;
+  padding: 20rpx 19rpx;
+  display: block;
+  height: 352rpx;
+}
+
+.naviator_icon {
+  width: 100rpx;
+  padding: 0rpx 39rpx;
+  float: left;
+  height: 176rpx;
+}
+
+.adList {
+  width: 100%;
+  padding-top: 12rpx;
+  display: block;
+  background-color: #f2f2f2;
+}
+
+.adList::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.adItem {
+  width: 100%;
+  padding-bottom: 12rpx;
+  display: block;
+  height: 340rpx;
+}
+
+.bottom_adList {
+  width: 100%;
+  display: block;
+  background-color: #f2f2f2;
+  height: 368rpx;
+}
+
+.productAd {
+  width: 246rpx;
+  float: left;
+  margin-right: 6rpx;
+  height: 238rpx;
+}
+
+.shopAd {
+  width: 372rpx;
+  float: left;
+  margin-right: 6rpx;
+  margin-top: 6rpx;
+  height: 130rpx;
+}
+
+.shops_tip {
+  width: 100%;
+  line-height: 50rpx;
+  height: 50rpx;
+  position: relative;
+  background-color: #f2f2f2;
+  padding-top: 12rpx;
+  padding-bottom: 10rpx;
+}
+
+.shops_tip::before {
+  content: '';
+  height: 1px;
+  border-top: 1px solid #ccc;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 10%;
+}
+
+.shops_tip .txt {
+  position: absolute;
+  font-size: 28rpx;
+  color: #70704e;
+  top: 12rpx;
+  left: 278rpx;
+  height: 50rpx;
+  background: url(http://image.asj.com/images/O2O/index_shop_list.png) no-repeat #f2f2f2;
+  width: 140rpx;
+  padding-left: 70rpx;
+  padding-right: 14rpx;
+  background-position: 14rpx 0;
+  background-size: 50rpx 120rpx;
+}
+
+.shops_list {
+  width: 100%;
+  position: relative;
+  background-color: #f2f2f2;
+}
+
+.shops_list::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.shop_view {
+  width: 734rpx;
+  position: relative;
+  padding: 10rpx 8rpx;
+  background: url(http://image.asj.com/images/O2O/index_tab_two.png) no-repeat right 20rpx center #fff;
+  background-size: 60rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.shop_view::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.shop_view .shop_logo {
+  float: left;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.shop_view .shop_logo .shop_cartCount {
+  display: block;
+  position: absolute;
+  padding: 0 4rpx;
+  left: 100rpx;
+  top: 2rpx;
+  font-size: 24rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  min-width: 20rpx;
+  text-align: center;
+  background-color: #e20831;
+  color: #fff;
+  border-radius: 14rpx;
+}
+
+.shop_view .name {
+  float: left;
+  padding-left: 14rpx;
+  width: 600rpx;
+  font-weight: bold;
+  height: 36rpx;
+  line-height: 36rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shop_view .time {
+  float: left;
+  padding-left: 14rpx;
+  width: 600rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shop_view .eval-star {
+  float: left;
+  height: 36rpx;
+  width: 200rpx;
+  position: relative;
+}
+
+.shop_view .grayStar {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+
+.shop_view .lightStar {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.shop_view .distance {
+  float: left;
+  padding-left: 60rpx;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  white-space: nowrap;
+}
+
+.shop_view .notice {
+  float: left;
+  width: 100%;
+  line-height: 36rpx;
+  height: 36rpx;
+  overflow: hidden;
+}
+
+.shop_view .isSend {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 0 16rpx;
+  color: #f00;
+  background-color: #ccc;
+}
+
+.shop_goods {
+  position: relative;
+  width: 100%;
+  zoom: 1;
+  margin-bottom: 12rpx;
+  background-color: #fff;
+  padding-top: 10rpx;
+}
+
+.shop_goods::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.shop_good {
+  width: 23%;
+  margin: 1%;
+  float: left;
+}
+
+.shop_good::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.shop_good .img {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+
+.shop_good .img::after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.shop_good .img image {
+  border: 2rpx solid #DDD;
+  width: 100%;
+  box-sizing: border-box;
+  height: 176rpx;
+  display: block;
+}
+
+.shop_good .img .tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 24rpx;
+  padding: 0 16rpx;
+  z-index: 10;
+  background-color: #e20831;
+  color: #fff;
+  height: 36rpx;
+  line-height: 36rpx;
+}
+
+.shop_good .pri {
+  width: 100%;
+  height: 44rpx;
+  text-align: center;
+  line-height: 44rpx;
+  color: #e20831;
+  float: left;
+}
+
+.bottom_tipImg {
+  width: 100%;
+  position: relative;
+  height: 78rpx;
+  
+}
+
+.bottom_tipImg .tel {
+  width: 100%;
+  position: absolute;
+  height: 78rpx;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+@import "/utils/wetoast/wetoast.wxss";

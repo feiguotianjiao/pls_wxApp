@@ -1,0 +1,220 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**detail.wxss**/
+
+.shop_view {
+  width: 734rpx;
+  position: relative;
+  padding: 10rpx;
+  overflow: auto;
+}
+
+.shop_view .shop_logo {
+  float: left;
+  width: 186rpx;
+  height: 186rpx;
+  overflow: hidden;
+}
+
+.shop_view .name {
+  float: left;
+  padding-left: 14rpx;
+  width: 500rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.shop_view .time {
+  float: left;
+  padding-left: 14rpx;
+  width: 500rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.shop_view .eval-star {
+  float: left;
+  height: 36rpx;
+  width: 200rpx;
+  position: relative;
+}
+
+.shop_view .grayStar {
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+
+.shop_view .lightStar {
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.shop_view .notice {
+  float: left;
+  width: 500rpx;
+  line-height: 36rpx;
+  height: 72rpx;
+  overflow: hidden;
+  padding-left: 14rpx;
+}
+
+.shop_view .isSend {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  padding: 0 16rpx;
+  color: #f00;
+  background-color: #ccc;
+}
+
+.shop_view .toSearch {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90rpx;
+  width: 80rpx;
+}
+
+.btns {
+  width: 100%;
+  display: block;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.btns .cateBtns {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  height: 72rpx;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.btns .cateBtns .cateBtn {
+  padding: 0 22rpx;
+  border-bottom: 3px solid #fff;
+  height: 72rpx;
+  display: inline-block;
+  border-right: 1px solid #ccc;
+  line-height: 72rpx;
+  box-sizing: border-box;
+}
+
+.btns .cateBtns .sel {
+  border-bottom: 3px solid #382070;
+  color: #382070;
+}
+
+.btns .typeBtns {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  height: 72rpx;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.btns .typeBtns .typeBtn {
+  padding: 0 22rpx;
+  height: 48rpx;
+  display: inline-block;
+  border: 1px solid #999;
+  line-height: 48rpx;
+  margin: 12rpx;
+  border-radius: 24rpx;
+  box-sizing: border-box;
+}
+
+.btns .typeBtns .sel {
+  border: 1px solid #382070;
+  color: #382070;
+}
+
+.pds {
+  width: 100%;
+  display: block;
+  padding: 0rpx 7rpx;
+  padding-bottom: 260rpx;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.pds .pd {
+  width: 49%;
+  padding: 8rpx;
+  margin: 12rpx 0.5%;
+  background-color: #f8f8f8;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+}
+
+.pds .pd image {
+  width: 100%;
+  height: 344rpx;
+  display: block;
+}
+
+.pds .pd .addCart {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+  background: url(http://image.asj.com/images/O2O/icon-cart-60.png) no-repeat;
+  background-size: cover;
+  z-index: 8;
+}
+.pds .pd .toBuy {
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #FFF;
+  background-color: #e30830;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.pds .pd .soldOut {
+  background-color: #999;
+}
+
+.pds .pd .tit {
+  height: 42rpx;
+  line-height: 42rpx;
+  clear: both;
+  width: 100%;
+}
+
+.pds .pd .tit .salePri {
+  color: #e20831;
+}
+
+.pds .pd .tit .marketPri {
+  display: inline-block;
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 12rpx;
+}
+.toTop{
+  bottom: 120rpx;
+}
+@import "../../common/shopCart/shopCart.wxss";

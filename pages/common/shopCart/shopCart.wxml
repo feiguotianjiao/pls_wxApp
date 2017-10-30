@@ -1,0 +1,55 @@
+<!--shopCart.wxml-->
+<view class="shopCart">
+  <view class="border"></view>
+  <block wx:if="{{shopCartList.pdlist.length > 0}}">
+    <view class="cartTip light" hover-class="navigator-hover" style="{{cartTip_top}}" catchtap="showSwich">
+      <view class="count">{{totalNum}}</view>
+    </view>
+    <view class="cartMes" style="{{cartMes_left}}">
+      <view class="pri">￥{{totalPri}}</view>
+      <view wx:if="{{false}}" class="costList">
+        <view class="first">配送费：
+          <text>￥0.00</text>
+        </view>
+        <view class="second">差
+          <text>￥0.00</text>免配送费</view>
+      </view>
+    </view>
+    <view wx:if="{{totalSelNum > 0}}" catchtap='toWriteOrder' hover-class="navigator-hover" class="toWriteOrder">去结算</view>
+    <view wx:else class="toWriteOrder disOrder">去结算</view>
+    <view class="cartContent" style="{{cartContent_top}}">
+      <view class="arr"></view>
+      <view class="top">
+        <view wx:if="{{totalNum > totalSelNum}}" hover-class="navigator-hover" catchtap='changeAllSel' class="check toCheckAll">全选</view>
+        <view wx:else hover-class="navigator-hover" catchtap='cancelAllSel' class="check toCheckAll checked">取消</view>
+        <text class="checkCount">（已选{{totalSelNum}}件）</text>
+        <view class="clearCart" hover-class="navigator-hover" catchtap='clearCart'>清空购物车</view>
+      </view>
+      <view class="cartItems" style="{{cartItems_style}}">
+        <view class="cartItem" wx:for="{{shopCartList.pdlist}}" wx:for-item="pdItem" wx:for-index="idt" wx:key="{{idt}}">
+          <view wx:if="{{pdItem.isSel == 1}}" class="check toCheck checked" hover-class="navigator-hover" data-pdid='{{pdItem.pdId}}' catchtap='cancelSel'></view>
+          <view wx:if="{{pdItem.isSel == 0}}" class="check toCheck" hover-class="navigator-hover" data-pdid='{{pdItem.pdId}}' catchtap='changeSel'></view>
+          <view class="pdContent">
+            <image src="{{pdItem.imageurl}}"></image>
+            <view class="name overTxt">{{pdItem.pdName}}</view>
+            <view class="pri">￥{{pdItem.price}}</view>
+          </view>
+          <view class="changeCount">
+            <view class="change cartMinus" data-pdid='{{pdItem.pdId}}' hover-class="navigator-hover" catchtap='reduceCount'></view>
+            <view class="count">{{pdItem.num}}</view>
+            <view class="change cartPlus" data-pdid='{{pdItem.pdId}}' hover-class="navigator-hover" catchtap='addCount'></view>
+          </view>
+          <view class="innerBorder"></view>
+        </view>
+      </view>
+    </view>
+    <view class="mask" style="{{mask_style}}"></view>
+  </block>
+  <block wx:else>
+    <view class="cartTip"></view>
+    <view class="cartMes">
+      <view class="pri" style='color:#666;'>购物车是空的~~</view>
+    </view>
+    <view class="toWriteOrder disOrder">去结算</view>
+  </block>
+</view>

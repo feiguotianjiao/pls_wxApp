@@ -1,0 +1,93 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**manageAddress.wxss**/
+
+page {
+  background-color: #f4f4f4;
+}
+
+.container {
+  display: block;
+  padding-bottom: 120rpx;
+}
+
+
+.title {
+  height: 92rpx;
+  line-height: 92rpx;
+  position: fixed;
+  width: 94%;
+  top: 0;
+  left: 0;
+  padding-left: 6%;
+  font-size: 32rpx;
+  background-color: #f4f4f4;
+  z-index: 20;
+}
+
+.title .addAddress {
+  position: absolute;
+  right: 30rpx;
+  top: 16rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #FFF;
+  background-color: #372070;
+  border-radius: 12rpx;
+  padding: 0 50rpx;
+}
+.hisAddress_list {
+  width: 100%;
+  padding-top: 92rpx;
+}
+
+.hisAddress_list .address_con {
+  padding: 10rpx 30rpx;
+  position: relative;
+  width: 690rpx;
+  border-top: 1px solid #e4e4e4;
+  background-color: #fff;
+}
+
+.hisAddress_list .address_con .member_txt {
+  padding: 10rpx 0;
+  line-height: 32rpx;
+  width: 490rpx;
+  font-size: 28rpx;
+}
+
+.hisAddress_list .address_con .address_txt {
+  line-height: 28rpx;
+  width: 490rpx;
+  font-size: 24rpx;
+  padding-bottom: 10rpx;
+}
+
+.hisAddress_list .address_con .delete {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-del-blue-130.png) no-repeat;
+  background-size: 100rpx;
+  display: block;
+  right: 130rpx;
+  top: 50%;
+  margin-top: -50rpx;
+}
+
+.hisAddress_list .address_con .edit {
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-pencil-blue-130.png) no-repeat;
+  background-size: 100rpx;
+  display: block;
+  right: 20rpx;
+  top: 50%;
+  margin-top: -50rpx;
+}

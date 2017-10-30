@@ -1,0 +1,55 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**success.wxss**/
+
+page {
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: block;
+  padding-bottom: 240rpx;
+}
+
+.topMes {
+  width: 90%;
+  margin-left: 5%;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 48rpx;
+  color: #666;
+  padding-top: 190rpx;
+  background: url(http://image.asj.com/images/O2O/order_mes.png) no-repeat center 20rpx;
+  background-size: 150rpx;
+}
+
+.orderTxt {
+  width: 90%;
+  padding: 16rpx 5%;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #999;
+}
+
+.btip {
+  font-size: 24rpx;
+}
+
+.orderTxt .money {
+  font-size: 52rpx;
+  line-height: 64rpx;
+  color: #df1641;
+  font-weight: bold;
+}
+.botMes{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 140rpx;
+}

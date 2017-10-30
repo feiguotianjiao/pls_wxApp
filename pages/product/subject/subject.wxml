@@ -1,0 +1,46 @@
+<!--subject.wxml-->
+<view class="container" style="background-color:{{bgColor}}">
+  <view class="banner" style='margin-bottom:20rpx;'>
+   <image mode="widthFix" src="{{imageUrl}}"></image>
+  </view>
+  <scroll-view scroll-x class="subject_list" style='display:none;'>
+    <navigator url="url">店庆福利节</navigator>
+    <navigator url="url">七夕鲜花</navigator>
+    <navigator url="url">均一价</navigator>
+    <navigator url="url">建盏大放送</navigator>
+    <navigator url="url">店庆福利节</navigator>
+    <navigator url="url">七夕鲜花</navigator>
+  </scroll-view>
+  <block wx:for="{{floorList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+    <view class="floor_title overTxt">{{itemName.floorName}}</view>
+    <view class="floor_Pds">
+      <navigator wx:for="{{itemName.pdList}}" wx:for-index="idt" wx:for-item="pdItem" wx:key="{{idt}}" url="/pages/product/detail/detail?shopId={{pdItem.shopId}}&pdId={{pdItem.pdId}}" class="floor_Pd">
+        <image src="{{pdItem.imageurl}}"/>
+        <view class="tit">
+          <block wx:if="{{pdItem.promatePrice}}">
+            <text class="salePri">￥{{pdItem.promatePrice}}</text>
+            <view class="marketPri">￥{{pdItem.price}}</view>
+          </block>
+          <block wx:else>
+            <text class="salePri">￥{{pdItem.price}}</text>
+          </block>
+        </view>
+        <view class="tit" style='display:none;'>1.5Kg</view>
+        <view class="tit overTxt">{{pdItem.pdName}}</view>
+        <view wx:if="{{pdItem.isSelling}}" class="addCart" data-pdid='{{pdItem.pdId}}' data-shopid='{{pdItem.shopId}}' catchtap="addCart">加入购物车</view>
+        <view wx:else class="addCart soldOut" >已售罄</view>
+      </navigator>
+    </view>
+  </block>
+  <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  <text class="describe">活动说明：\r\n{{describe_txt}}</text>
+  <view id="nav">
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/product/cart/cart" class="cart">
+    <view class="count">{{cartCount}}</view>
+   </navigator>
+  </view>
+  <view class="toTop" bindtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+</view>

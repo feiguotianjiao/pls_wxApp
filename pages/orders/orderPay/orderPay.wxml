@@ -1,0 +1,29 @@
+<!--orderPay.wxml-->
+<view class="container">
+  <view class="menus" style="border-top:0px none;">
+    <view class="menu" style="border-top:0px none;">
+      <view class="title">订单编号</view>
+      <view class="content on" style="border-top:0px none;">{{orderData.ordersNo}}</view>
+    </view>
+    <view class="menu">
+      <view class="title">订单金额</view>
+      <view class="content on" style="border-top:0px none;"><text class="pri">￥{{orderData.payPrice}}</text></view>
+    </view>
+  </view>
+  <view class="menus">
+    <view class="menu" style="border-top:0px none;">
+      <view class="title">余额抵扣</view>
+      <view class="content on balancePay {{changeBalance[0]}}" style="border-top:0px none;" data-select="{{changeBalance[1]}}" catchtap="changeBalance">
+        <text class="pri">￥{{changePrice}}</text>（可用余额<text class="pri">￥{{orderData.accountPrice}}</text>）
+        <view class="sel"></view>
+      </view>
+    </view>
+  </view>
+  <view class="menus" style="border-top:0px none;">
+    <view class="menu">
+      <view class="title">应付金额</view>
+      <view class="content on" style="border-top:0px none;"><text class="pri">￥{{newPayPrice}}</text></view>
+    </view>
+  </view>
+  <view class="goPay" catchtap="goPay" hover-class="navigator-hover">确定微信支付</view>
+</view>

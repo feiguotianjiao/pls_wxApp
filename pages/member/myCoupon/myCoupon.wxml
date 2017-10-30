@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='couponCon'>
+    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
+      <view class='coupon-no overTxt'>rejn7044</view>
+      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
+      <view class='coupon-tip'>全场通用</view>
+      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
+      <view class='coupon-icon icon-timeout'></view>
+    </navigator>
+  </view>
+  <view class='couponCon'>
+    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
+      <view class='coupon-no overTxt'>rejn7044</view>
+      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
+      <view class='coupon-tip'>全场通用</view>
+      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
+      <view class='coupon-icon icon-unuse'></view>
+    </navigator>
+  </view>
+  <view class='couponCon'>
+    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
+      <view class='coupon-no overTxt'>rejn7044</view>
+      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
+      <view class='coupon-tip'>全场通用</view>
+      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
+      <view class='coupon-icon icon-used'></view>
+    </navigator>
+  </view>
+  <view class='couponCon'>
+    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
+      <view class='coupon-no overTxt'>rejn7044</view>
+      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
+      <view class='coupon-tip'>全场通用</view>
+      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
+      <view class='coupon-icon icon-timeout'></view>
+    </navigator>
+  </view>
+  <view class='couponCon'>
+    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
+      <view class='coupon-no overTxt'>rejn7044</view>
+      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
+      <view class='coupon-tip'>全场通用</view>
+      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
+      <view class='coupon-icon icon-timeout'></view>
+    </navigator>
+  </view>
+  <view class='bindCon'>
+    <view class='bindCoupon' catchtap="toAddCoupon" hover-class='navigator-hover'>绑定优惠券</view>
+  </view>
+  <view class="addCoupon" catchtouchmove catchtap style="{{couponShow}}">
+    <view class="couponPop">
+      <view class="title">绑定优惠券</view>
+      <view class="mesContainer">
+        <view class="iptCon">
+          <input class="ipt" placeholder="优惠券号" />
+        </view>
+        <view class="iptCon">
+          <input class="ipt toCode" placeholder="验证码" />
+          <view class="img">
+            <image mode="aspectFit" src="{{codeImg}}" catchtap="changeCodeImg"></image>
+          </view>
+          <view class="freash" catchtap="changeCodeImg"></view>
+        </view>
+      </view>
+      <view class="btns">
+        <view class="toBind" hover-class="navigator-hover" catchtap="bindCoupon">立即绑定</view>
+        <view class="toCancel" hover-class="navigator-hover" catchtap="cancelBindCounpon">取消</view>
+      </view>
+    </view>
+  </view>
+  <view id="nav" style='bottom:120rpx;'>
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

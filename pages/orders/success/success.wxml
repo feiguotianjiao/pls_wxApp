@@ -1,0 +1,25 @@
+<!--success.wxml-->
+<view class="container">
+  <view class="topMes">恭喜您，已下单成功！</view>
+  <view class='orderTxt'>订单编号：{{orderData.ordersNo}}</view>
+  <view class='orderTxt'>
+    金额：<text class="money">{{orderData.payPrice}}</text>元
+  </view>
+  <view class='orderTxt'>
+    支付方式：<text style="color:#37c4b1;">{{orderData.payTypeStr}}</text>
+  </view>
+  <view class='orderTxt'>下单时间：{{orderData.createTime}}</view>
+  <view class='orderTxt'>收件人：{{orderData.consignee}}</view>
+  <view class='orderTxt'>电话：{{orderData.mobile}}</view>
+  <view class='orderTxt'>地址：{{orderData.address}}</view>
+  <view class='orderTxt'>配送方式：{{orderData.deliveryName}}</view>
+  <view class='orderTxt'>约定时间：{{orderData.sentTime}}</view>
+  <view class='orderTxt btip'>温馨提示：请保持电话畅通，购物愉快！</view>
+  <view class='botMes'>
+    <image src='http://image.asj.com/images/O2O/order_bot.jpg' mode='widthFix'></image>
+  </view>
+  <view id="nav" style='bottom:130rpx;'>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

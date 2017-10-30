@@ -1,0 +1,222 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**index.wxss**/
+
+page {
+  background-color: #f2f2f2;
+}
+
+.container {
+  display: block;
+  padding-bottom: 240rpx;
+}
+
+.couponCon {
+  width: 686rpx;
+  padding: 32rpx;
+  position: relative;
+  border-bottom: 1px solid #ddd;
+}
+
+.couponCon .couponDetail {
+  width: 686rpx;
+  height: 300rpx;
+  background: url(http://pls.asj.com/images/O2O/counp-bg.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.couponCon .couponDetail .coupon-no {
+  width: 220rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 26rpx;
+  position: absolute;
+  top: 130rpx;
+  left: -66rpx;
+  font-weight: bold;
+  transform: rotate(90deg);
+  font-family: 'arial';
+  color: #555;
+}
+
+.couponCon .couponDetail .coupon-title {
+  width: 466rpx;
+  height: 84rpx;
+  line-height: 42rpx;
+  font-size: 36rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 160rpx;
+  color: #6c2d07;
+  overflow: hidden;
+}
+
+.couponCon .couponDetail .coupon-tip {
+  width: 466rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size: 30rpx;
+  position: absolute;
+  top: 144rpx;
+  left: 160rpx;
+  color: #a88e7f;
+  overflow: hidden;
+}
+
+.couponCon .couponDetail .coupon-time {
+  width: 458rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  font-size: 24rpx;
+  position: absolute;
+  top: 196rpx;
+  text-align: center;
+  left: 164rpx;
+  color: #fff;
+  overflow: hidden;
+}
+
+.couponCon .couponDetail .coupon-icon {
+  width: 120rpx;
+  height: 120rpx;
+  position: absolute;
+  top: -20rpx;
+  right: -20rpx;
+}
+
+.couponCon .couponDetail .icon-unuse {
+  background: url(http://pls.asj.com/images/O2O/counp-unuse.png) no-repeat;
+  background-size: contain;
+}
+
+.couponCon .couponDetail .icon-used {
+  background: url(http://pls.asj.com/images/O2O/counp-used.png) no-repeat;
+  background-size: contain;
+}
+
+.couponCon .couponDetail .icon-timeout {
+  background: url(http://pls.asj.com/images/O2O/counp-timeout.png) no-repeat;
+  background-size: contain;
+}
+
+.bindCon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100rpx;
+  width: 100%;
+  border-top: 1px solid #372070;
+  background-color: #f2f2f2;
+}
+
+.bindCon .bindCoupon {
+  width: 90%;
+  position: relative;
+  height: 72rpx;
+  border: 1px solid #372070;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 72rpx;
+  top: 14rpx;
+  left: 5%;
+  background-color: #fff;
+  font-size: 32rpx;
+  border-radius: 36rpx;
+}
+
+.addCoupon {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 120;
+}
+
+.addCoupon .couponPop {
+  position: absolute;
+  top: 180rpx;
+  width: 92%;
+  left: 4%;
+  border-radius: 16rpx;
+  font-size: 36rpx;
+  line-height: 92rpx;
+  background-color: #f2f2f2;
+}
+
+.addCoupon .couponPop .title {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  border-bottom: 1px solid #bbb;
+}
+
+.addCoupon .couponPop .mesContainer {
+  width: 86%;
+  padding: 0 7%;
+  padding-top: 32rpx;
+}
+
+.addCoupon .couponPop .mesContainer .iptCon {
+  height: 92rpx;
+  border: 1px solid #ccc;
+  border-radius: 16rpx;
+  background-color: #fff;
+  margin-bottom: 32rpx;
+}
+
+.addCoupon .couponPop .mesContainer .ipt {
+  height: 92rpx;
+  padding: 0 20rpx;
+  border: 0px none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.addCoupon .couponPop .mesContainer .toCode {
+  float: left;
+  width: 52%;
+}
+
+.addCoupon .couponPop .mesContainer .img {
+  float: left;
+  width: 30%;
+  padding-left: 20rpx;
+  height: 92rpx;
+  box-sizing: border-box;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.addCoupon .couponPop .mesContainer .freash {
+  float: left;
+  width: 18%;
+  height: 92rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-flash.png) no-repeat center center;
+  background-size: 68rpx;
+}
+
+.addCoupon .couponPop .btns {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #bbb;
+}
+
+.addCoupon .couponPop .btns .toBind {
+  width: 50%;
+  color: #e70039;
+  float: left;
+}
+
+.addCoupon .couponPop .btns .toCancel {
+  width: 50%;
+  border-left: 1px solid #bbb;
+  box-sizing: border-box;
+  float: left;
+}

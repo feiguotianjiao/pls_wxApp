@@ -1,0 +1,56 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**balance.wxss**/
+.container{
+  display: block;
+  background-color: #f2f2f2;
+  font-size: 30rpx;
+}
+.topMes{
+  text-align: center;
+  width: 100%;
+  padding-top: 320rpx;
+  background: url(http://image.asj.com/images/O2O/icon-balance.png) no-repeat center 92rpx;
+  background-size: 200rpx;
+}
+.pri{
+  text-align: center;
+  width: 100%;
+  padding-top: 10rpx;
+  font-size: 48rpx;
+  color: #e50039;
+  padding-bottom: 40rpx;
+}
+.withdrawBtn{
+  width: 92%;
+  margin-left: 4%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #FFF;
+  border-radius: 12rpx;
+  background-color: #372070;
+}
+.balanceDetail{
+  width: 100%;
+  text-align: center;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin: 10rpx 0;
+  color: #372070;
+}
+.tip{
+  width: 92%;
+  margin-left: 4%;
+  line-height: 38rpx;
+  color: #666;
+}
+.botTip{
+  margin-top: 100rpx;
+  font-size: 28rpx;
+  text-align: center;
+}

@@ -1,0 +1,407 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**writeOrder.wxss**/
+
+.container {
+  display: block;
+  background-color: #f2f2f2;
+  font-family: 'arial', '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53';
+  font-size: 28rpx;
+  padding-bottom: 140rpx;
+}
+
+.tip {
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #fff;
+  background-color: #3090e6;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.tip .pre {
+  font-weight: bold;
+}
+
+.writeMes {
+  width: 720rpx;
+  padding-left: 30rpx;
+  height: 182rpx;
+  padding-bottom: 4px;
+  background: url(http://pls.asj.com/images/O2O/border-bg.png) bottom repeat-x #fffbee;
+}
+
+.noSendTip {
+  width: 100%;
+  padding:10rpx 30rpx;
+  line-height: 32rpx;
+  color: #F00;
+  border-bottom: 1px solid #ddd;
+  background:#fffbee;
+  overflow: auto;
+}
+.writeMes .address {
+  width: 100%;
+  padding-left: 50rpx;
+  height: 92rpx;
+  border-bottom: 1px solid #ddd;
+  background: url(http://pls.asj.com/images/O2O/icon-plate-blue-40.png) no-repeat left;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.writeMes .ipt {
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 0 10rpx;
+  position: relative;
+  top: 10rpx;
+  background: transparent;
+  border: 0px none;
+  box-sizing: border-box;
+}
+
+.writeMes .name {
+  width: 50%;
+  padding-left: 50rpx;
+  height: 90rpx;
+  float: left;
+  background: url(http://pls.asj.com/images/O2O/icon-user-blue-40.png) no-repeat left;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.writeMes .name .ipt {
+  border-right: 1px solid #ddd;
+}
+
+.writeMes .phone {
+  width: 50%;
+  height: 90rpx;
+  float: left;
+  background-size: contain;
+  box-sizing: border-box;
+}
+
+.menus {
+  margin-top: 30rpx;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-left: 30rpx;
+  font-size: 32rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.menus .menu {
+  width: 100%;
+  line-height: 100rpx;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+}
+
+.menus .menu .title {
+  color: #999;
+  width: 26%;
+  float: left;
+}
+
+.menus .menu .content {
+  width: 74%;
+  float: right;
+  position: relative;
+  display: none;
+}
+
+.menus .menu .content .send {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 4%;
+  top: 10rpx;
+  float: left;
+  position: relative;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+}
+
+.menus .menu .SendTime {
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.menus .menu .edit {
+  background: url(http://pls.asj.com/images/O2O/icon-pencil-blue-130.png) no-repeat 8rpx 4rpx;
+  background-size: 82rpx;
+}
+
+.menus .menu .save {
+  background: url(http://pls.asj.com/images/O2O/icon-code-color-100.png) no-repeat 8rpx 4rpx;
+  background-size: 82rpx;
+}
+
+.menus .menu .takeAddress {
+  padding: 30rpx 0;
+  line-height: 40rpx;
+}
+
+.menus .menu .coupon {
+  color: #372070;
+}
+
+.menus .menu .balancePay {
+  color: #999;
+}
+
+.menus .menu .balancePay .pri {
+  color: #f00;
+}
+
+.menus .menu .on {
+  display: block;
+  border-top: 1px solid #ddd;
+}
+
+.menus .menu .isSel {
+  display: block;
+}
+
+.menus .menu .content .sel {
+  display: none;
+}
+
+.menus .menu .isSel .sel {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  position: relative;
+  top: 10rpx;
+  left: 8rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-right-green-40.png) no-repeat;
+  background-size: contain;
+}
+
+.menus .menu .arr {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100rpx;
+  height: 100rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-arr-gray-102.png) no-repeat right;
+  background-size: contain;
+  transition: 500ms;
+}
+
+.menus .menu .down {
+  transform: rotate(90deg);
+}
+
+.orderIpt {
+  width: 94%;
+  height: 90rpx;
+  line-height: 90rpx;
+  position: relative;
+  padding: 0 2%;
+  border-radius: 10rpx;
+  font-size: 32rpx;
+  left: 1%;
+  margin-top: 30rpx;
+  border: 0px none;
+  background-color: #ddd;
+  color: #999;
+}
+
+.orderPds {
+  width: 98%;
+  position: relative;
+  padding: 16rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  left: 1%;
+  margin-top: 30rpx;
+  background-color: #fff;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.orderPds .pd {
+  border-top: 1px solid #ddd;
+  padding: 16rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+.orderPds .pd image {
+  width: 104rpx;
+  height: 104rpx;
+  margin-right: 20rpx;
+  float: left;
+}
+
+.orderPds .pd .name {
+  width: 520rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  float: left;
+}
+
+.orderPds .pd .pri {
+  width: 520rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  margin-top: 32rpx;
+  float: left;
+  color: #ff3434;
+}
+
+.orderPds .pd .count {
+  height: 32rpx;
+  line-height: 32rpx;
+  position: absolute;
+  top: 60rpx;
+  right: 10rpx;
+  float: left;
+  color: #999;
+}
+.orderPds .totalTip {
+  width: 100%;
+  height: 32rpx;
+  line-height: 32rpx;
+  text-align: right;
+}
+
+.goShop {
+  width: 86%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #372070;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  position: relative;
+  left: 7%;
+}
+
+.toOrder {
+  width: 690rpx;
+  border-top: 1px solid #372070;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #eee;
+  height: 68rpx;
+  z-index: 2;
+  padding: 20rpx 30rpx;
+}
+
+.toOrder .pri {
+  float: left;
+  line-height: 68rpx;
+}
+
+.toOrder .btn {
+  float: right;
+  line-height: 64rpx;
+  padding: 0 50rpx;
+  border-radius: 34rpx;
+  border: 1px solid #372070;
+  text-align: center;
+  background-color: #fff;
+}
+
+.addCoupon {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.addCoupon .couponPop {
+  position: absolute;
+  top: 180rpx;
+  width: 92%;
+  left: 4%;
+  border-radius: 16rpx;
+  font-size: 36rpx;
+  line-height: 92rpx;
+  background-color: #f2f2f2;
+}
+
+.addCoupon .couponPop .title {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  border-bottom: 1px solid #bbb;
+}
+
+.addCoupon .couponPop .mesContainer {
+  width: 86%;
+  padding: 0 7%;
+  padding-top: 32rpx;
+}
+
+.addCoupon .couponPop .mesContainer .iptCon {
+  height: 92rpx;
+  border: 1px solid #CCC;
+  border-radius: 16rpx;
+  background-color: #FFF;
+  margin-bottom: 32rpx;
+}
+.addCoupon .couponPop .mesContainer .ipt{
+  height: 92rpx;
+  padding: 0 20rpx;
+  border: 0px none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.addCoupon .couponPop .mesContainer .toCode{
+  float: left;
+  width: 52%;
+}
+.addCoupon .couponPop .mesContainer .img{
+  float: left;
+  width: 30%;
+  padding-left: 20rpx;
+  height: 92rpx;
+  box-sizing: border-box;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
+}
+.addCoupon .couponPop .mesContainer .freash{
+  float: left;
+  width: 18%;
+  height: 92rpx;
+  background: url(http://pls.asj.com/images/O2O/icon-flash.png) no-repeat center center;
+    background-size: 68rpx;
+}
+
+.addCoupon .couponPop .btns {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #bbb;
+}
+
+.addCoupon .couponPop .btns .toBind {
+  width: 50%;
+  color: #e70039;
+  float: left;
+}
+
+.addCoupon .couponPop .btns .toCancel {
+  width: 50%;
+  border-left: 1px solid #bbb;
+  box-sizing: border-box;
+  float: left;
+}
+@import "/utils/wetoast/wetoast.wxss";

@@ -1,0 +1,153 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**index.wxss**/
+
+page {
+  background-color: #f2f2f2;
+}
+.container{
+  display: block;
+  padding-bottom: 120rpx;
+}
+.topMes {
+  width: 670rpx;
+  padding: 20rpx 40rpx;
+  position: relative;
+}
+
+.topMes .mesCon {
+  width: 134rpx;
+  height: 156rpx;
+  float: left;
+}
+
+.topMes .mesCon .mesIcon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 17rpx;
+  border-radius: 50rpx;
+}
+.topMes .mesCon .icon-order {
+  background: url(http://pls.asj.com/images/O2O/icon-order.png) no-repeat center #CCC;
+  background-size: 50rpx;
+}
+.topMes .mesCon .icon-accept {
+  background: url(http://pls.asj.com/images/O2O/icon-accept.png) no-repeat center #CCC;
+  background-size: 50rpx;
+}
+.topMes .mesCon .icon-receive {
+  background: url(http://pls.asj.com/images/O2O/icon-receipt.png) no-repeat center #CCC;
+  background-size: 50rpx;
+}
+.topMes .mesCon .mesTxt {
+  width: 100%;
+  height: 56rpx;
+  text-align: center;
+  line-height: 56rpx;
+  color: #666;
+}
+.topMes .mesCon .mesBorder {
+  width: 92%;
+  height: 8rpx;
+  margin-left: 4%;
+  margin-top: 48rpx;
+  background-color: #CCC;
+}
+.topMes .mesCon .sel {
+  background-color: #372070;
+}
+.reOrder{
+  padding:0 40rpx;
+  width: 670rpx;
+  overflow: hidden;
+  text-align: center;
+}
+.reOrder .tip {
+  font-size: 28rpx;
+  text-align: center;
+}
+.reOrder .btn {
+  font-size: 32rpx;
+  width: 260rpx;
+  padding: 6rpx 0;
+  background-color: #FFF;
+  border: 1px solid #372070;
+  border-radius: 12rpx;
+  text-align: center;
+  float: left;
+  margin: 20rpx 10rpx;
+  box-sizing: border-box;
+}
+.reOrder .reWirte {
+  margin-left: 65rpx;
+}
+.orderMes{
+  padding: 20rpx 40rpx;
+  background-color: #FFF;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  line-height: 52rpx;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.orderMes .txt{
+  width: 64%;
+  float: left;
+}
+.orderMes .num{
+  width: 60rpx;
+  padding-right: 2%;
+  float: left;
+}
+.orderMes .pri{
+  float: left;
+  color: #F00;
+}
+.orderMes .time{
+  font-size: 24rpx;
+  color: #999;
+  float: left;
+}
+.orderMes .total{
+  font-size: 26rpx;
+  color: #999;
+  float: right;
+  text-align: right;
+}
+.memberMes{
+  padding: 20rpx 40rpx;
+  background-color: #FFF;
+  border-bottom: 1px solid #DDD;
+  line-height: 42rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  color: #999;
+}
+.toTel{
+  width: 650rpx;
+  height: 102rpx;
+  line-height: 102rpx;
+  border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
+  padding-left: 100rpx;
+  font-size: 32rpx;
+  background: url(http://image.asj.com/images/O2O/icon-tel-gray-51.png) no-repeat 40rpx center #FFF;
+  background-size: contain;
+  font-weight: bold;
+  margin: 20rpx 0;
+}
+.toBuy{
+  width: 660rpx;
+  border: 1px solid #372070;
+  text-align: center;
+  padding: 12rpx 0;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  background-color: #FFF;
+  border-radius: 12rpx;
+}

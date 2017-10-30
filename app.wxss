@@ -1,0 +1,133 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**app.wxss**/
+
+page {
+  height: 100%;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: #333;
+  font: normal 'arial', '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53';
+  font-size: 26rpx;
+}
+
+.scrollContainer {
+  position: fixed;
+  display: block;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  overflow: auto;
+  color: #333;
+  font: normal 'arial', '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53';
+  font-size: 26rpx;
+}
+
+image {
+  width: 100%;
+  display: unset;
+  height: auto;
+}
+
+.overTxt {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toTop {
+  width: 80rpx;
+  height: 80rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 100;
+}
+
+.bottom_tipTxt {
+  width: 100%;
+  position: relative;
+  height: 0px;
+  line-height: 78rpx;
+  text-align: center;
+  overflow: hidden;
+}
+
+#nav {
+  min-width: 98rpx;
+  height: 90rpx;
+  border-radius: 10rpx;
+  position: fixed;
+  z-index: 100;
+  bottom: 20rpx;
+  left: 20rpx;
+  background-color: rgba(61, 61, 61, 0.7);
+}
+
+#nav navigator {
+  display: block;
+  width: 98rpx;
+  height: 90rpx;
+  float: left;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
+
+#nav navigator:first-child {
+  border-left: 0 none;
+}
+
+#nav .back {
+  background: url(http://image.asj.com/images/O2O/icon-back-white-100.png) no-repeat;
+  background-size: cover;
+}
+
+#nav .home {
+  background: url(http://image.asj.com/images/O2O/icon-home-white-100.png) no-repeat;
+  background-size: cover;
+}
+
+#nav .my {
+  background: url(http://image.asj.com/images/O2O/icon-my-white-100.png) no-repeat;
+  background-size: cover;
+}
+
+#nav .cart {
+  position: relative;
+  background: url(http://image.asj.com/images/O2O/icon-cart-white-100.png) no-repeat;
+  background-size: cover;
+}
+
+#nav .cart .count {
+  display: block;
+  float: right;
+  position: absolute;
+  padding: 0 4rpx;
+  right: 18rpx;
+  top: 16rpx;
+  font-size: 22rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  min-width: 20rpx;
+  text-align: center;
+  background-color: #e20831;
+  color: #fff;
+  border-radius: 14rpx;
+}

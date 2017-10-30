@@ -1,0 +1,19 @@
+
+<!--balance.wxml-->
+<view class="container">
+  <view class="topMes">我的余额</view>
+  <view class='pri'>￥9.50</view>
+  <navigator url='/pages/account/withdraw/withdraw' class='withdrawBtn'>提现</navigator>
+  <navigator url='/pages/account/balanceDetail/balanceDetail' class='balanceDetail'>余额明细</navigator>
+  <view class='tip'>
+    温馨提示：<text style='color:#e50039;'>拍立送合伙人佣金不可提现；</text>若当前有提现正在处理，则该笔提现金额冻结，且无法继续申请提现；该笔提现完成后可继续进行提现操作。
+  </view>
+  <view class='tip botTip'>
+    如有疑问，请致电客服电话400-6666-520咨询
+  </view>
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

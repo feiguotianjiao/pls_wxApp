@@ -1,0 +1,154 @@
+<!--index.wxml-->
+<view class="container">
+  <view wx:if="{{orderData.status == '0'}}" class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order sel'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:elif="{{orderData.status == '2'}}" class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order sel'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:elif="{{orderData.status == '6'}}" class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order sel'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept sel'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:elif="{{orderData.status == '3' || orderData.status == '4'}}" class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order sel'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept sel'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:elif="{{orderData.status == '5'}}" class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order sel'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept sel'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder sel'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive sel'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:else class="topMes">
+    <view class="mesCon">
+      <view class='mesIcon icon-order'></view>
+      <view class='mesTxt'>已下单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-accept'></view>
+      <view class='mesTxt'>商家接单</view>
+    </view>
+    <view class="mesCon">
+      <view class='mesBorder'></view>
+    </view>
+    <view class="mesCon">
+      <view class='mesIcon icon-receive'></view>
+      <view class='mesTxt'>已收货</view>
+    </view>
+  </view>
+  <view wx:if="{{false}}" class='reOrder'>
+    <view class='tip'>感谢您对拍立送的信任与支持，期待再次光临</view>
+    <navigator class='btn reWirte' url='/pages/orders/writeOrder/writeOrder'>再来一单</navigator>
+    <navigator class='btn' url='/pages/shop/detail/detail'>再次选购</navigator>
+  </view>
+  <view class='orderMes'>
+    <block wx:for="{{orderData.detailList}}" wx:for-index="idt" wx:for-item="pdItem" wx:key="{{idt}}">
+      <view class='txt overTxt'>{{pdItem.pdName}}</view>
+      <view class='num'>×{{pdItem.num}}</view>
+      <view class='pri'>{{pdItem.price}}</view>
+    </block>
+    <view class='time'>{{orderData.createTime}}</view>
+    <text class='total'>实付：<text style='color:#F00;'>{{orderData.payPrice}}\n\r</text><text wx:if="{{orderData.sendPrice == '0.00'}}">免除配送费</text><text style='color:#F00;' wx:else>{{orderData.sendPrice}}</text></text>
+  </view>
+  <view class='memberMes'>
+    <text space='ensp'>收 货 人：{{orderData.consignee}}
+联系电话：{{orderData.mobile}}
+收货地址：{{orderData.address}}
+送达时间：{{orderData.sentTime}}
+付款方式：{{orderData.payTypeStr}}
+订单编号：{{orderData.ordersNo}}</text>
+  </view>
+  <view class="toTel" bindtap="showTel" hover-class='navigator-hover'>
+    客服电话<text style="color:#999;font-size:28rpx;"> 400-6666-520 0538-5629999</text>
+  </view>
+  <navigator open-type='switchTab' url='/pages/index/index' class='toBuy'>继续购物</navigator> 
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

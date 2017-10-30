@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <input class="ipt" catchtap='toSearch' disabled placeholder="搜索附近的店铺商品" placeholder-style="color:#999;">
+      <icon type="search" size="20" color="#CCC" />
+    </input>
+  </view>
+  <view class="cate_list">
+    <block wx:for="{{cateList}}"  wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <view wx:if="{{itemName.cateId == selCate}}" class="cate sel">{{itemName.cateName}}</view>
+      <view wx:else class="cate" bindtap="select_cate" data-cate="{{itemName.cateId}}" data-type="{{itemName.cateList}}">{{itemName.cateName}}</view>
+    </block>
+  </view>
+  <scroll-view scroll-y class="type_list" scroll-top="{{topNum}}">
+    <block wx:for="{{type_list}}"  wx:for-item="itemName" wx:for-index="idt" wx:key="{{idt}}">
+      <navigator class="secondName" url="/pages/product/catePds/catePds?cateId={{itemName.cateId}}">{{itemName.cateName}}</navigator>
+      <block wx:for="{{itemName.typeList}}"  wx:for-item="typeItem" wx:for-index="idl" wx:key="{{idl}}">
+        <navigator class="type" url="/pages/product/catePds/catePds?cateId={{itemName.cateId}}&typeId={{typeItem.typeId}}">
+          <image src="http://image.asj.com{{typeItem.typeImage}}"/>
+          <text>{{typeItem.typeName}}</text>
+        </navigator>
+      </block>
+    </block>
+  </scroll-view>
+</view>

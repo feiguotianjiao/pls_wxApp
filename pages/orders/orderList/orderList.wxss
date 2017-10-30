@@ -1,0 +1,143 @@
+/*  
+  Author:HouLei
+  Contact:353731385@qq.com
+  tel:15963115707
+  Github: https://github.com/feiguotianjiao/pls_wxApp.git
+*/
+/**orderList.wxss**/
+page {
+  background-color: #f4f4f4;
+}
+
+.tip {
+  width: 690rpx;
+  line-height: 36rpx;
+  padding: 20rpx 30rpx;
+}
+
+.order {
+  width: 750rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  display: block;
+}
+
+.order .topMes{
+  width: 710rpx;
+  padding: 12rpx 20rpx;
+  color: #999;
+  height: 42rpx;
+  line-height: 42rpx;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.order .topMes .shopName {
+  width: 65%;
+  font-size: 30rpx;
+  float: left;
+  padding-left: 40rpx;
+  background: url(http://image.asj.com/images/O2O/ms/shop_default_logo.png) no-repeat left center;
+  background-size: 36rpx;
+  box-sizing: border-box;
+}
+
+.order .topMes .time {
+  width: 35%;
+  font-size: 24rpx;
+  float: right;
+  color: #333;
+  text-align: right;
+}
+
+.order .content {
+  width: 710rpx;
+  padding: 12rpx 20rpx;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+  overflow: hidden;
+}
+
+.order .content .img {
+  width: 120rpx;
+  height: 120rpx;
+  float: left;
+  border: 1px solid #eaeaea;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.order .content .txt {
+  float: left;
+  padding-left: 20rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.order .content .btns {
+  position: absolute;
+  top: 12rpx;
+  right: 20rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #FFF;
+  overflow: hidden;
+}
+
+.order .content .btn {
+  float: right;
+  padding: 20rpx;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-left: 20rpx;
+  color: #FFF;
+}
+
+.order .bottom {
+  width: 710rpx;
+  padding: 20rpx 20rpx;
+  display: block;
+  overflow: hidden;
+}
+
+.order .bottom .price {
+  float: left;
+  height: 60rpx;
+  padding: 1px 0;
+  line-height: 60rpx;
+  color: #999;
+}
+
+.order .bottom .price text {
+  color: #f00;
+}
+
+.order .bottom .btn {
+  float: right;
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  border: 1px solid #372070;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+}
+
+.order .bottom .tips {
+  float: right;
+  padding: 1px 0;
+  margin-left: 20rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #999;
+}
+
+.order .bottom .evaluate {
+  border: none;
+  background-color: #fe5655;
+  padding: 0 30rpx;
+  color: #fff;
+}

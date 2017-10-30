@@ -1,0 +1,148 @@
+<!--balanceDetail.wxml-->
+<view class="container">
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money out'>-48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view class="detailCon">
+    <view class='mes'>购物<text class='tip'>（订单32476641余额支付）</text></view>
+    <view class='money in'>+48.50</view>
+    <view class='time'>2017-09-05 16:15:22</view>
+  </view>
+  <view id="nav">
+   <navigator open-type="navigateBack" class="back"></navigator>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+</view>

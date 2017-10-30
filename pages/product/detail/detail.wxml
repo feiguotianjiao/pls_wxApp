@@ -1,0 +1,82 @@
+<!--detail.wxml-->
+<scroll-view scroll-y bindscroll="pageScroll" scroll-top="{{topNum}}" class="scrollContainer">
+  <navigator open-type='navigateBack' class="close">
+    <icon type="cancel" size="46" color="#666" />
+  </navigator>
+  <swiper class="detail_swiper" indicator-dots indicator-color="rgba(56,32,112, .3)" indicator-active-color="#382070" circular interval="2000" duration="500">
+    <swiper-item wx:for="{{swiperImg}}" wx:key="*this">
+      <image bindtap="previewImg" data-url="{{item}}" src="{{item}}" />
+    </swiper-item>
+  </swiper>
+  <view class="describe">
+    <view class="name">{{pdName}}</view>
+    <view class="pri">
+      <text class="sale">￥{{cost}}</text>
+      <view wx:if="{{price.length > 0}}" class="original">￥{{price}}</view>
+    </view>
+    <view wx:if="{{isSelling}}" class="addCart" catchtap='addCart' hover-class="navigator-hover"></view>
+    <view wx:else class="toBuy soldOut">已售罄</view>
+  </view>
+  <view wx:if="{{false}}" class="evaluate" style='display:none;'>
+    <view class="title">
+      <view class="tip">商品评价</view>
+      <view class="score">
+        好评度 <text style="color:#f95656;">100.00%</text>　　1人评价
+      </view>
+    </view>
+    <view class="evaluate_item">
+      <view class="eval-star">
+        <image class="grayStar" src="http://image.asj.com/images/O2O/grayStar.png" />
+        <view class="lightStar" style="width:100%;">
+          <image src="http://image.asj.com/images/O2O/lightStar.png" />
+        </view>
+      </view>
+      <view class="eval-txt">a***3　　2016-09-19 11:59</view>
+      <view class="eval-main">很好吃阿飞问哦省的浪费价位哦 地方都无法 服务范围哦 佛为</view>
+    </view>
+    <view class="evaluate_item">
+      <view class="eval-star">
+        <image class="grayStar" src="http://image.asj.com/images/O2O/grayStar.png" />
+        <view class="lightStar" style="width:100%;">
+          <image src="http://image.asj.com/images/O2O/lightStar.png" />
+        </view>
+      </view>
+      <view class="eval-txt">a***3　　2016-09-19 11:59</view>
+      <view class="eval-main">很好吃</view>
+    </view>
+    <button type="default" size="default" bindtap="default">查看更多评论</button>
+  </view>
+  <view class="morePd">
+    <view class="title">同类热销</view>
+    <view class="pdList">
+      <block wx:for="{{catePdList}}" wx:for-index="idt" wx:for-item="pdItem" wx:key="{{idt}}">
+        <navigator wx:if="{{idt == 0}}" class="pdShow" open-type="redirect" url="/pages/product/detail/detail?shopId={{shopId}}&pdId={{pdItem.pdId}}" style="border-left:0px none;">
+          <image src="{{pdItem.imageurl}}"/>
+          <view class="name overTxt">{{pdItem.pdName}}</view>
+          <view wx:if="{{pdItem.promotePrice.length > 0}}" class="pri">￥{{pdItem.promotePrice}}</view>
+          <view wx:else class="pri">{{pdItem.price}}</view>
+        </navigator>
+        <navigator wx:else class="pdShow" open-type="redirect" url="/pages/product/detail/detail?shopId={{shopId}}&pdId={{pdItem.pdId}}">
+          <image src="{{pdItem.imageurl}}"/>
+          <view class="name overTxt">{{pdItem.pdName}}</view>
+          <view wx:if="{{pdItem.promotePrice.length > 0}}" class="pri">￥{{pdItem.promotePrice}}</view>
+          <view wx:else class="pri">{{pdItem.price}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  <view wx:if="{{false}}" class="moreContent">
+    <view class="tip">
+      <view class="txt">继续拖动，查看更多内容</view>
+    </view>
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+  <view id="nav" style='bottom:120rpx;'>
+   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
+   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+  <view class="toTop" bindtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
+  </view>
+  <include src="../../common/shopCart/shopCart.wxml"/>
+</scroll-view>
