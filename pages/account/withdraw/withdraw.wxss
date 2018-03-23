@@ -11,7 +11,7 @@
   font-size: 30rpx;
 }
 .withdrawIpt{
-  width: 92%;
+  width: 88%;
   margin: 40rpx 0;
   margin-left: 4%;
   padding: 0 2%;
@@ -29,6 +29,7 @@
   color: #FFF;
   border-radius: 12rpx;
   background-color: #372070;
+  cursor: pointer;
 }
 .tip{
   width: 92%;
@@ -45,3 +46,4 @@
 .topTip{
   padding-top: 80rpx;
 }
+@import "/utils/wetoast/wetoast.wxss";

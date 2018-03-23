@@ -16,17 +16,16 @@ var nowTime = sendDate.getHours()
 var nowDay = sendDate.getDay()
 var payType = 0
 var isOpen = false
-var dataStr, header, shopId, lat, lon, cartJson, addressId, totalPay, deliveryType, addressDetail, addressMobile, addressConsignee, cartList, addrName
+var dataStr, header, shopId, lat, lon, cartJson, addressId, totalPay, deliveryType, addressDetail, addressMobile, addressConsignee, cartList, addrName, couponNo, mIsLoad, cIsLoad
 var notice = ''
 Page({
   data: {
-    payClass: ['', 'isSel', ''],
+    payClass: ['', 'on', ''],
     days: days,
     value: [nowDay, 0],
     sendTimeClass: 'edit',
     pickerShow: 'display:none;',
-    couponShow: 'display:none;',
-    codeImg: 'http://pls.asj.com/MyImageServlet?date=' + dataStr
+    couponShow: 'display:none;'
   },
   changePay: function (e) {
     var index = parseInt(e.currentTarget.dataset.index)
@@ -60,29 +59,140 @@ Page({
       payClass: dataArr
     })
   },
+  selectCoupon: function (e) {
+    app.toLoad()
+    var that = this
+    var index = parseInt(e.currentTarget.dataset.ind)
+    var isDown = that.data.couponsClass[0]
+    var dataArr = that.data.couponsClass
+    var couponArr = that.data.couponItemClass
+    if (isDown == 'down') {
+      if (isNaN(index)){
+        couponNo = ""
+        dataArr = ["", "isSel", ""]
+        for (var id in couponArr) {
+          couponArr[id] = ''
+        }
+      }else{
+        couponNo = e.currentTarget.dataset.no
+        dataArr = ["", "", ""]
+        for (var id in couponArr) {
+          if(id == index) {
+            couponArr[id] = 'isSel'
+          } else {
+            couponArr[id] = ''
+          }
+        }
+      }
+      wx.request({
+        url: 'https://safe.asj.com/pls/appapi/latlon/orders/write.htm',
+        header: header,
+        data: {
+          shopId: shopId,
+          cartJson: cartJson,
+          addressId: addressId,
+          couponNo: couponNo
+        },
+        success: function (res) {
+          var userData = res.data.data
+          totalPay = userData.totalPriceNew.toFixed(2)
+          that.setData({
+            couponsClass: dataArr,
+            couponItemClass: couponArr,
+            totalPay: totalPay
+          })
+          wx.hideLoading()
+        }
+      })
+    } else {
+      dataArr = ["down", "on", "on"]
+      for (var tid in couponArr) {
+        if (couponArr[tid] == 'isSel') {
+          couponArr[tid] = 'on isSel'
+        } else{
+          couponArr[tid] = 'on'
+        }
+      } 
+      that.setData({
+        couponsClass: dataArr,
+        couponItemClass: couponArr
+      })
+      wx.hideLoading()
+    }
+  },
   toAddCoupon: function (e) {
-    sendDate = new Date()
-    dataStr = (sendDate.getMinutes()).toString() + (sendDate.getSeconds()) + (sendDate.getMilliseconds())
-    this.setData({
-      couponShow: 'display:block;',
-      codeImg: 'http://pls.asj.com/MyImageServlet?date=' + dataStr
+    var that = this
+    wx.downloadFile({
+      url: 'https://pls.asj.com/MyImageServlet',
+      header: header,
+      success: function (res) {
+        var imgUrl = res.tempFilePath
+        that.setData({
+          couponShow: 'display:block;',
+          codeImg: imgUrl
+        })
+      }
     })
   },
   bindCoupon: function (e) {
-    this.setData({
-      couponShow: 'display:none;'
+    wx.showLoading({
+      title: '正在绑定中',
+      mask: true
+    })
+    var that = this
+    var couponNo = that.data.couponNo
+    var couponCode = that.data.couponCode
+    wx.request({
+      url: 'https://safe.asj.com/pls/appapi/coupon/bindingcoupon.htm',
+      data: {
+        couponNo: couponNo,
+        couponCode: couponCode
+      },
+      header: header,
+      success: function (res) {
+        wx.hideLoading()
+        var reInfo = res.data.errorInfo
+        var reNo = res.data.errorNo
+        if (reNo == "-1") {
+          that.wetoast.toast({
+            title: reInfo,
+            duration: 2000
+          })
+          that.setData({
+            couponCode: ''
+          })
+          that.toAddCoupon()
+        } else if (reNo == "0") {
+          that.setData({
+            couponShow: 'display:none;',
+            couponNo: '',
+            couponCode: ''
+          })
+          app.toLoad()
+          that.loadCoupons()
+        }
+      }
     })
   },
   cancelBindCounpon: function (e) {
     this.setData({
-      couponShow: 'display:none;'
+      couponShow: 'display:none;',
+      couponNo: '',
+      couponCode: ''
     })
   },
   changeCodeImg: function (e) {
-    sendDate = new Date()
-    dataStr = (sendDate.getMinutes()).toString() + (sendDate.getSeconds()) + (sendDate.getMilliseconds())
-    this.setData({
-      codeImg: 'http://pls.asj.com/MyImageServlet?date=' + dataStr
+    var that = this
+    wx.downloadFile({
+      url: 'https://pls.asj.com/MyImageServlet',
+      header: header,
+      success: function (res) {
+        var imgUrl = res.tempFilePath
+        that.setData({
+          codeImg: imgUrl,
+          couponCode: ''
+        })
+      }
     })
   },
   changeSend: function (e) {
@@ -203,6 +313,14 @@ Page({
       }
     } else if (iptKey == 'notice') {
       notice = iptVal
+    } else if (iptKey == 'couponNo') {
+      this.setData({
+        couponNo: iptVal
+      })
+    } else if (iptKey == 'couponCode') {
+      this.setData({
+        couponCode: iptVal
+      })
     }
   },
   toSubmit: function () {
@@ -256,6 +374,7 @@ Page({
         deliveryType: deliveryType,
         time: time,
         payType: payType,
+        couponNo: couponNo,
         notice: notice,
         addressDetail: addressDetail,
         addressMobile: addressMobile,
@@ -283,11 +402,11 @@ Page({
             }
           }
           if (payType == 0) {
-            wx.reLaunch({
+            wx.redirectTo({
               url: '/pages/orders/orderPay/orderPay?ordersNo=' + ordersNo,
             })
           } else if (payType == 1) {
-            wx.reLaunch({
+            wx.redirectTo({
               url: '/pages/orders/success/success?ordersNo=' + ordersNo,
             })
           }
@@ -302,10 +421,40 @@ Page({
       }
     })
   },
-  onShow: function (e) {
-    app.toLoad()
+  loadCoupons: function (){
+    var that = this
+    wx.request({
+      url: 'https://safe.asj.com/pls/appapi/coupon/rulelist.htm',
+      header: header,
+      data: {
+        shopID: shopId,
+        cartJson: cartJson
+      },
+      success: function (res) {
+        var couponsData = res.data.data
+        if (couponsData) {
+          var couponsCount = couponsData.length
+          var couponsClass = ["", "on", ""]
+          var couponItemClass = []
+          for (var i = 0; i < couponsCount; i++) {
+            couponItemClass[i] = ""
+          }
+          that.setData({
+            couponsData: couponsData,
+            couponsCount: couponsCount,
+            couponItemClass: couponItemClass,
+            couponsClass: couponsClass
+          })
+        }
+        cIsLoad = true
+        if (mIsLoad) {
+          wx.hideLoading()
+        }
+      }
+    })
   },
   onLoad: function (opt) {
+    app.toLoad()
     payType = 0
     new app.WeToast()
     var that = this
@@ -378,7 +527,10 @@ Page({
               totalPay: totalPay
             })
           }
-          wx.hideLoading()
+          mIsLoad = true
+          if(cIsLoad){
+            wx.hideLoading()
+          }
         }
       })
     } else {
@@ -438,10 +590,14 @@ Page({
               totalPay: totalPay
             })
           }
-          wx.hideLoading()
+          mIsLoad = true
+          if (cIsLoad) {
+            wx.hideLoading()
+          }
         }
       })
     }
+    that.loadCoupons()
     setTimeout(function () {
       wx.hideLoading()
     }, 10000)

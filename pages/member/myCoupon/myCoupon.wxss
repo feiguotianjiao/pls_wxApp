@@ -36,8 +36,9 @@ page {
   line-height: 32rpx;
   font-size: 26rpx;
   position: absolute;
-  top: 130rpx;
-  left: -66rpx;
+  letter-spacing: 4rpx;
+  top: 136rpx;
+  left: -68rpx;
   font-weight: bold;
   transform: rotate(90deg);
   font-family: 'arial';
@@ -220,3 +221,4 @@ page {
   box-sizing: border-box;
   float: left;
 }
+@import "/utils/wetoast/wetoast.wxss";

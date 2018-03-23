@@ -35,6 +35,10 @@
   border-radius: 12rpx;
   background-color: #372070;
 }
+.dis{
+  color: #DDD;
+  background-color: #577070;
+}
 .balanceDetail{
   width: 100%;
   text-align: center;

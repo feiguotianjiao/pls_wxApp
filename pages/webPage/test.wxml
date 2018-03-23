@@ -1,0 +1,2 @@
+<!--pages/webPage/test.wxml-->
+<web-view src="http://pls.asj.com/wxo2o/index.htm"></web-view> 

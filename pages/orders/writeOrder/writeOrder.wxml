@@ -63,11 +63,20 @@
       </view>
     </view>
   </view>
-  <view wx:if="{{false}}" class="menus">
+  <view class="menus">
     <view class="menu" style="border-top:0px none;">
-      <view class="arr {{payClass[0]}}"></view>
+      <view class="arr {{couponsClass[0]}}"></view>
       <view class="title">优惠信息</view>
-      <view class="content isSel coupon" style="border-top:0px none;" catchtap="toAddCoupon">+添加优惠券</view>
+      <block wx:if="{{couponsCount > 0}}">
+        <view class="content {{couponsClass[1]}}" style="border-top:0px none;" catchtap="selectCoupon"><text style='color:#f00;'>{{couponsCount}}</text> 张优惠券可用</view>
+        <block wx:for="{{couponsData}}" wx:for-item="coupon" wx:for-index="idx" wx:key="{{idx}}">
+          <view class="content {{couponItemClass[idx]}} couponItem" data-ind="{{idx}}" data-no="{{coupon.couponNume}}" catchtap="selectCoupon">{{coupon.couponName}} <text style='color:#999;'>截止{{coupon.endDate}}前可用</text><view class="sel"></view></view>
+        </block>
+        <view class="content {{couponsClass[2]}} coupon" catchtap="toAddCoupon">+添加优惠券</view>
+      </block>
+      <block wx:else>
+        <view class="content on coupon" style="border-top:0px none;" catchtap="toAddCoupon">+添加优惠券</view>
+      </block>
     </view>
   </view>
   <input class="orderIpt" bindblur="changeIptVal" data-ipt="notice" placeholder="请输入订单特殊要求（如带包烟）" />
@@ -96,10 +105,10 @@
       <view class="title">绑定优惠券</view>
       <view class="mesContainer">
         <view class="iptCon">
-          <input class="ipt" placeholder="优惠券号" />
+          <input class="ipt" bindblur='changeIptVal' bindfocus='' data-ipt="couponNo" placeholder="优惠券号" value='{{couponNo}}' />
         </view>
         <view class="iptCon">
-          <input class="ipt toCode" placeholder="验证码" />
+          <input class="ipt toCode" bindblur='changeIptVal' bindfocus='' data-ipt="couponCode" placeholder="验证码"  value='{{couponCode}}'/>
           <view class="img">
             <image mode="aspectFit" src="{{codeImg}}" catchtap="changeCodeImg"></image>
           </view>

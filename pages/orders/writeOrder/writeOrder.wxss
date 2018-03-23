@@ -155,7 +155,12 @@
 .menus .menu .coupon {
   color: #372070;
 }
-
+.menus .menu .couponItem{
+  padding: 30rpx 0;
+  line-height: 40rpx;
+  padding-right: 100rpx;
+  box-sizing: border-box;
+}
 .menus .menu .balancePay {
   color: #999;
 }

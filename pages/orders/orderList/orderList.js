@@ -13,7 +13,6 @@ var orderList = []
 var pageNo = 1
 var loadTxt = true
 var isSet_bottom_tipStyle = false
-var isLoad = false
 var header, totalPage
 Page({
   data: {
@@ -93,15 +92,29 @@ Page({
     }
   },
   onShow: function () {
-    orderList = wx.getStorageSync('orderList')
-    if (orderList && isLoad) {
-      this.setData({
-        orderList: orderList
-      })
+    app.toLoad()
+    var that = this
+    pageNo = 1
+    header = wx.getStorageSync('header')
+    wx.request({
+      url: 'https://safe.asj.com/pls/appapi/orders/mlist.htm',
+      data: {
+        pageNo: pageNo
+      },
+      header: header,
+      success: function (res) {
+        var userData = res.data.data
+        orderList = userData.orderList
+        totalPage = userData.totalPage
+        that.setData({
+          orderList: orderList
+        })
+        wx.hideLoading()
+      }
+    })
+    setTimeout(function () {
       wx.hideLoading()
-    }else{
-      this.onLoad()
-    }
+    }, 10000)
   },
   //点击进行拨打电话
   showTel: function () {
@@ -278,32 +291,5 @@ Page({
         }
       }
     })
-  },
-  onLoad: function () {
-    app.toLoad()
-    var that = this
-    pageNo = 1
-    header = wx.getStorageSync('header')
-    wx.request({
-      url: 'https://safe.asj.com/pls/appapi/orders/mlist.htm',
-      data: {
-        pageNo: pageNo
-      },
-      header: header,
-      success: function (res) {
-        var userData = res.data.data
-        orderList = userData.orderList
-        totalPage = userData.totalPage
-        that.setData({
-          orderList: orderList
-        })
-        wx.setStorageSync('orderList', orderList)
-        isLoad = true
-        wx.hideLoading()
-      }
-    })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 10000)
   }
 })

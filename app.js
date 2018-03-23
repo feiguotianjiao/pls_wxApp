@@ -315,7 +315,7 @@ App({
                     code: resB.code
                   },
                   success: function (resC) {
-                    header = { 'content-type': 'application/json', 'Cookie': 'PLSID=' + resC.data.data }
+                    header = { 'content-type': 'application/json', 'Cookie': 'PLSID=' + resC.data.data}
                     wx.setStorageSync("header", header)
                   }
                 })

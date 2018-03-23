@@ -48,12 +48,12 @@ Page({
       success: function (res) {
         if (res.tapIndex == 0) {
           wx.makePhoneCall({
-            phoneNumber: '400-6666-520' //仅为示例，并非真实的电话号码
+            phoneNumber: '400-6666-520' 
           })
         }
         if (res.tapIndex == 1) {
           wx.makePhoneCall({
-            phoneNumber: '0538-5629999' //仅为示例，并非真实的电话号码
+            phoneNumber: '0538-5629999' 
           })
         }
       }
@@ -217,12 +217,16 @@ Page({
             var pageMap = data.pageMap
             var adbList = data.adbList
             var adList = data.adList
+            var adBigSelfList = data.adBigSelfList
+            var adSmallSelfList = data.adSmallSelfList
             that.setData({
               swiperImg: swiperImg,
               pageMap: pageMap,
               shopCates: shopCates,
               adbList: adbList,
               adList: adList,
+              adBigSelfList: adBigSelfList,
+              adSmallSelfList: adSmallSelfList,
               shopList: shopList,
               preAddr: preAddr
             })

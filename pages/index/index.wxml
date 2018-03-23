@@ -30,77 +30,124 @@
       <view class="address_txt overTxt">{{preAddr}}</view>
     </navigator>
   </view>
-  <view class="toConnect">
+  <!--<view class="toConnect">
     <view catchtap="showTel" class="showTel" hover-class='navigator-hover'>
       <image mode="widthFix" src="http://image.asj.com/images/O2O/telImg.png" />
     </view>
     <view class="scan" bindtap="toSweep" hover-class='navigator-hover'>
       <image mode="widthFix" src="http://image.asj.com/images/O2O/sweepImg.png" />
     </view>
+  </view>-->
+  <view wx:if="{{adBigSelfList.length > 0}}" class="adBigList">
+    <block wx:for="{{adBigSelfList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <view wx:else class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </view>
+    </block>
+  </view>
+  <view wx:if="{{adSmallSelfList.length > 0}}" class="adSmallList">
+    <block wx:for="{{adSmallSelfList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
+      <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </navigator>
+      <view wx:else class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </view>
+    </block>
   </view>
   <view class="naviator_icons">
     <navigator class="naviator_icon" wx:for="{{shopCates}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}" url="/pages/shop/list/list?shopCateId={{itemName.scId}}">
       <image mode="aspectFit" src="{{itemName.scUrl}}" />
     </navigator>
   </view>
-  <view class="adList">
+  <view wx:if="{{adbList.length > 0}}" class="adList">
     <block wx:for="{{adbList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
       <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="adItem">
         <image mode="widthFix" src="{{itemName.adImage}}" />
       </navigator>
-      <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="adItem">
+      <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="adItem">
         <image mode="widthFix" src="{{itemName.adImage}}" />
       </navigator>
-      <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="adItem">
+      <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="adItem">
         <image mode="widthFix" src="{{itemName.adImage}}" />
       </navigator>
+      <view wx:else class="adItem">
+        <image mode="widthFix" src="{{itemName.adImage}}" />
+      </view>
     </block>
   </view>
-  <view class="bottom_adList">
+  <view wx:if="{{adList.length > 0}}" class="bottom_adList">
     <block wx:for="{{adList}}" wx:for-item="itemName" wx:for-index="idx" wx:key="{{idx}}">
       <block wx:if="{{idx < 2}}">
         <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="productAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd">
+        <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd">
+        <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
+        <view wx:else class="productAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </view>
       </block>
       <block wx:if="{{idx == 2}}">
         <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="productAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
+        <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
+        <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="productAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
+        <view wx:else class="productAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </view>
       </block>
       <block wx:if="{{idx == 3}}">
         <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shopAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd">
+        <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd">
+        <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
+        <view wx:else class="shopAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </view>
       </block>
       <block wx:if="{{idx == 4}}">
         <navigator wx:if="{{itemName.adType == 0}}" url="/pages/shop/detail/detail?shopId={{itemName.shopId}}" class="shopAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
+        <navigator wx:elif="{{itemName.adType == 1}}" url="/pages/product/detail/detail?shopId={{itemName.shopId}}&pdId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
-        <navigator wx:if="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
+        <navigator wx:elif="{{itemName.adType == 2}}" url="/pages/product/subject/subject?subjectId={{itemName.adTypeId}}" class="shopAd" style="margin-right:0px;">
           <image mode="widthFix" src="{{itemName.adImage}}" />
         </navigator>
+        <view wx:else class="shopAd">
+          <image mode="widthFix" src="{{itemName.adImage}}" />
+        </view>
       </block>
     </block>
   </view>

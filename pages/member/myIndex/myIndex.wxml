@@ -21,22 +21,14 @@
     </navigator>
   </view>
   <view class="menus">
-    <!--<navigator url="/pages/account/balance/balance" class="item">
+    <navigator url="/pages/account/balance/balance" class="item">
       <view class="con balance">
         余额<text style="color:#999;">（可用余额￥<text style="color:#f00;">{{myBalance}}</text>）</text>
       </view>
     </navigator>
     <navigator url="/pages/member/myCoupon/myCoupon" class="item">
       <view class="con coupon">我的优惠券</view>
-    </navigator>-->
-    <view class="item" bindtap="toTip">
-      <view class="con balance">
-        余额<text style="color:#999;">（可用余额<text style="color:#f00;">￥{{myBalance}}</text>）</text>
-      </view>
-    </view>
-    <view class="item" bindtap="toTip">
-      <view class="con coupon">我的优惠券</view>
-    </view>
+    </navigator>
     <navigator url="/pages/member/manageAddress/manageAddress" class="item">
       <view class="con address">收货地址管理</view>
     </navigator>
@@ -50,6 +42,9 @@
     <navigator url="/pages/member/about/about" class="item">
       <view class="con about">关于拍立送</view>
     </navigator>
+    <!--<navigator url="/pages/webPage/test" class="item">
+      <view class="con about">进入网页</view>
+    </navigator>-->
   </view>
   <view class="footer">
     爱尚家网上商城版权所有 经营性网站许可证号 鲁ICP备14031356号

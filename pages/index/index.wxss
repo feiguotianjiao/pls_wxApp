@@ -156,10 +156,38 @@
   height: 176rpx;
 }
 
+.adBigList {
+  width: 100%;
+  display: block;
+}
+
+.adBigList image {
+  display: block;
+}
+
+.adBigList .adItem {
+  width: 100%;
+  display: block;
+}
+
+.adSmallList {
+  width: 100%;
+  display: block;
+}
+
+.adSmallList image {
+  display: block;
+}
+
+.adSmallList .adItem {
+  width: 250rpx;
+  float: left;
+}
+
 .adList {
   width: 100%;
-  padding-top: 12rpx;
   display: block;
+  padding-bottom: 6rpx;
   background-color: #f2f2f2;
 }
 
@@ -171,9 +199,9 @@
   visibility: hidden;
 }
 
-.adItem {
+.adList .adItem {
   width: 100%;
-  padding-bottom: 12rpx;
+  padding-top: 12rpx;
   display: block;
   height: 340rpx;
 }
@@ -183,6 +211,7 @@
   display: block;
   background-color: #f2f2f2;
   height: 368rpx;
+  padding-top: 6rpx;
 }
 
 .productAd {

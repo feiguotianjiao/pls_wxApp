@@ -1,48 +1,15 @@
 <!--index.wxml-->
+<import src="/utils/wetoast/wetoast.wxml"/>
+<template is="wetoast" data="{{...__wetoast__}}"/>
 <view class="container">
-  <view class='couponCon'>
+  <view wx:for="{{couponList}}" wx:for-index="idt" wx:for-item="couponItem" wx:key="{{idt}}" class='couponCon'>
     <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
-      <view class='coupon-no overTxt'>rejn7044</view>
-      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
-      <view class='coupon-tip'>全场通用</view>
-      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
-      <view class='coupon-icon icon-timeout'></view>
-    </navigator>
-  </view>
-  <view class='couponCon'>
-    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
-      <view class='coupon-no overTxt'>rejn7044</view>
-      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
-      <view class='coupon-tip'>全场通用</view>
-      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
-      <view class='coupon-icon icon-unuse'></view>
-    </navigator>
-  </view>
-  <view class='couponCon'>
-    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
-      <view class='coupon-no overTxt'>rejn7044</view>
-      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
-      <view class='coupon-tip'>全场通用</view>
-      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
-      <view class='coupon-icon icon-used'></view>
-    </navigator>
-  </view>
-  <view class='couponCon'>
-    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
-      <view class='coupon-no overTxt'>rejn7044</view>
-      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
-      <view class='coupon-tip'>全场通用</view>
-      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
-      <view class='coupon-icon icon-timeout'></view>
-    </navigator>
-  </view>
-  <view class='couponCon'>
-    <navigator class='couponDetail' open-type='switchTab' url="/pages/index/index">
-      <view class='coupon-no overTxt'>rejn7044</view>
-      <view class='coupon-title'>拍立送体验券5元（满49元可用）</view>
-      <view class='coupon-tip'>全场通用</view>
-      <view class='coupon-time'>有效期：2017-01-19 至 2017-01-26</view>
-      <view class='coupon-icon icon-timeout'></view>
+      <view class='coupon-no overTxt'>{{couponItem.couponNume}}</view>
+      <view class='coupon-title'>{{couponItem.couponName}}</view>
+      <view class='coupon-tip'>{{couponItem.useDescribe}}</view>
+      <view class='coupon-time'>有效期：{{couponItem.beginDate}} 至 {{couponItem.endDate}}</view>
+      <view wx:if="{{couponItem.status == 4}}" class='coupon-icon icon-timeout'></view>
+      <view wx:if="{{couponItem.status == 2}}" class='coupon-icon icon-unuse'></view>
     </navigator>
   </view>
   <view class='bindCon'>
@@ -53,10 +20,10 @@
       <view class="title">绑定优惠券</view>
       <view class="mesContainer">
         <view class="iptCon">
-          <input class="ipt" placeholder="优惠券号" />
+          <input class="ipt" bindblur='changeIptVal' bindfocus='' data-ipt="couponNo" placeholder="优惠券号" value='{{couponNo}}' />
         </view>
         <view class="iptCon">
-          <input class="ipt toCode" placeholder="验证码" />
+          <input class="ipt toCode" bindblur='changeIptVal' bindfocus='' data-ipt="couponCode" placeholder="验证码"  value='{{couponCode}}'/>
           <view class="img">
             <image mode="aspectFit" src="{{codeImg}}" catchtap="changeCodeImg"></image>
           </view>
@@ -73,5 +40,9 @@
    <navigator open-type="navigateBack" class="back"></navigator>
    <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
    <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
+  </view>
+  <view class="bottom_tipTxt" style="{{bottom_tipStyle}}">正在加载数据……</view>
+  <view class="toTop" catchtap="toTop" style="{{toTop_style}}">
+    <image mode="widthFix" src="http://image.asj.com/images/O2O/toTop_white.png?t=20161028"/>
   </view>
 </view>

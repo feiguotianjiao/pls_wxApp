@@ -4,16 +4,11 @@
     申请提交成功，请耐心等待客服审核！
   </view>
   <navigator open-type='switchTab' url='/pages/member/myIndex/myIndex' class='btn'>返回个人中心</navigator>
-  <navigator url='/pages/account/withdrawSuccess/withdrawSuccess' class='btn index'>去首页逛逛</navigator>
+  <navigator open-type='switchTab' url='/pages/index/index' class='btn index'>去首页逛逛</navigator>
   <view class='tip'>
     申请提现后，拍立送处理时限为3-5个工作日，银行处理时限为2-3个工作日；
   </view>
   <view class='tip botTip'>
     如有疑问，请致电客服电话400-6666-520咨询
-  </view>
-  <view id="nav">
-   <navigator open-type="navigateBack" class="back"></navigator>
-   <navigator open-type="switchTab" url="/pages/index/index" class="home"></navigator>
-   <navigator open-type="switchTab" url="/pages/member/myIndex/myIndex" class="my"></navigator>
   </view>
 </view>

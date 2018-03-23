@@ -32,6 +32,7 @@
   height: 40rpx;
   line-height: 40rpx;
   float: left;
+  clear: left;
 }
 .detailCon .money{
   max-width: 28%;
